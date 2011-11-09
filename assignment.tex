@@ -17,7 +17,7 @@
 
 \section*{Part A}
 \subection*{Question i}
-train_faces.arff with 5-fold CV
+Training from \t{train_faces.arff} with 5-fold CV
 NaiveBayes: Accuracy 12\%
 J48: Accuracy 37\%
 SMO: Accuracy 46\%
@@ -39,5 +39,17 @@ J48: Accuracy 62\%
 SMO: Accuracy 88\%
 
 We can compare this performance with the results from part i) as baseline. After removing the erroneous instances, the accuracy of all three classifiers has greatly improved. Since the dataset was smaller, the time taken to train and evaluate the classfiers was also much shorter.
+
+\subsection*{Question v}
+Training SMO classifier from \t{train_faces_clean.arff} with \t{val_faces.arff} as test set.
+
+SMO: Accuracy 92\%
+
+This is comparable to the performance on the training data earlier.
+
+Two example correctly classified instances: [32, 85]
+Two example incorrectly classified instances: [15, 42]
+
+The classifier seems to make mistakes on instances where the subject's eyes are entirely in shadow.
 
 \end{document}
