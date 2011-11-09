@@ -1,0 +1,1 @@
+/usr/lib/jvm/java/bin/java -Xmx1024m -classpath /usr/share/java/mysql-connector-java.jar:/usr/share/java/hsqldb.jar:/usr/share/java/postgresql-jdbc.jar:/usr/share/java/java_cup.jar:/usr/share/java/libsvm.jar:/usr/share/java/weka.jar::/usr/lib/javasqlite/sqlite.jar weka.gui.GUIChooser

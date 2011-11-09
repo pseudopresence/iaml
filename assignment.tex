@@ -1,0 +1,31 @@
+\documentclass[a4paper]{article}
+\author{Chris Swetenham (s1149322)}
+\title{IAML Assignment}
+\date{November 22, 2011}
+
+\usepackage{fullpage}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\section*{Part A}
+\subection*{Question i}
+train_faces.arff with 5-fold CV
+NaiveBayes: Accuracy 12\%
+J48: Accuracy 37\%
+SVO: Accuracy 46\%
+\subsection*{Question ii}
+AddCluster: EM using 10 clusters corresponding to the 10 subjects in the dataset.
+In the histogram for the cluster attribute, we notice that there are two clusters which dominate, with 100 instances each. We were hoping to see 10 roughly equal clusters corresponding to the 10 subjects in the dataset. At this point, checking the histogram of the class labels, we notice that these are unevenly distributed, and further we have 400 instances rather than the 20*10 we were promised. The two dominating classes together sum to 200, the discrepancy between the expected and actual size of the dataset. Finally, taking the clusters and labelling them by class, we see that there is very little correspondance between the two attributes.
+The dominating clusters are \i{cluster2} and \i{cluster6}. Taking the first three images from each cluster: [6,12,20] and [2,15,29]:
+Comparing this to the first three images from \{cluster1} and \{cluster3}: [1,7,8], [13,17,19]:
+
+We see that the two dominating clusters seem to be pure white and noisy dark images which are not relevant to our task.
+\end{document}
