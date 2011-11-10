@@ -52,4 +52,46 @@ Two example incorrectly classified instances: [15, 42]
 
 The classifier seems to make mistakes on instances where the subject's eyes are entirely in shadow.
 
+\section*{Part B}
+\subsection*{Question i}
+In the Naive Bayes model, each of the attributes are independently distributed given the class label. This is not a very good assumption for our data set, since nearby pixels will usually have similar values, and lighting conditions affect pixels in similar ways across large regions of the image.
+
+For our dataset, Naive Bayes will build a distribution of the values for each pixel for each subject's images. Each subject only has 20 images and there are 255 possible pixel values, so this will be a very sparse distribution; and with or without +1 smoothing applied, this will make for poor predictions.
+
+On one hand, we want to choose a small enough number of bins that we have some bins with multiple instances in them. On the other hand, too few bins will give us very little discriminative power. 
+
+NaiveBayes with 5-fold CV, discretized pixel values:
+5 bins:  45\%
+10 bins: 57\%
+20 bins: 61.5\%
+40 bins: 62\%
+60 bins: 62.5\%
+80 bins: 60.5\%
+100 bins: 59\%
+
+Out of the settings tested, using 60 bins for discretization gives the best performance. We see a moderate gain in performance over the original NaiveBayes result (62.5\% vs 52.5\%); this is about what we would expect, since we improved on the original sparse dataset but NaiveBayes remains less than ideal for the task at hand since its assumptions about the structure of the data do not hold well for our dataset.
+
+\subsection*{Question ii}
+\t{InfoGainAttributeVal} works by computing the information gain of each attribute, which is the difference between the entropy of the marginal class distribution and the entropy of the class distribution conditioned on that attribute. The attribute with the highest information gain tells us the most about the class, and one with 0 information gain is independent of the class.
+
+After removing the attributes with 0 information gain, I was left with 353 attributes - I note that the provided \t{train_faces_clean_best.arff} has 350 attributes.
+
+\subsection*{Question iii}
+The selected pixels with highest information gain cluster around the areas of the eyes, the corner of the chin, and the mouth and nose, ignoring the cheeks and the nose bridge. This corresponds with the most distinguishing features of a human face.
+
+
+
+A potential problem with the information gain criterion is that if we use it to select more than one feature at once, these features might be correlated, and so the second we select would tell us a lot by itself but very little if we already know the first.
+
+\subsection*{Question iv}
+NaiveBayes: 60\% (vs 52.5\%)
+SMO: 91\% (vs 88\%)
+
+We showed in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the sparsity of values. If we had a much denser dataset, attributes which are poor predictors of class label would not affect classification performance, but since we do not they are actively harmful and removing them slightly improves our performance.
+
+The SVM algorithm can and does simply assign near-0 weights to attributes which don't contribute much; for example \t{pixel_813} was given a weight of 0.001 
+
+
+*** TODO just noticed that NaiveBayes models each probability with a gaussian rather than a discrete distribution when we haven't performed discretization, need to redo sections on NaiveBayes above :(
+
 \end{document}
