@@ -85,13 +85,63 @@ A potential problem with the information gain criterion is that if we use it to 
 
 \subsection*{Question iv}
 NaiveBayes: 60\% (vs 52.5\%)
+J48: 63.5\% (vs 62\%)
 SMO: 91\% (vs 88\%)
 
 We showed in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the sparsity of values. If we had a much denser dataset, attributes which are poor predictors of class label would not affect classification performance, but since we do not they are actively harmful and removing them slightly improves our performance.
 
-The SVM algorithm can and does simply assign near-0 weights to attributes which don't contribute much; for example \t{pixel_813} was given a weight of 0.001 
+The decision tree algorithm already works by selecting the attributes with the highest information gain, so as expected we see very little difference.
+
+The SVM algorithm can simply assign near-0 weights to attributes which don't contribute much, so we don't see much of a gain here either.
 
 
 *** TODO just noticed that NaiveBayes models each probability with a gaussian rather than a discrete distribution when we haven't performed discretization, need to redo sections on NaiveBayes above :(
+
+\section*{Part C}
+\subsection*{Question i}
+
+The eigenvalues in descending order are plotted in Figure~TODO. As we can see there is a sharp fall-off after the first few eigenvalues which contribute most of the variation in the dataset.
+
+\subsection*{Question ii}
+
+After using the PrincipalComponents attribute filter to retain 95\% of the variation in the dataset, we are left with only 28 attributes.
+
+NaiveBayes: 77\%
+J48: 58.5\%
+SMO: 82\%
+
+PCA gives us components which are actually independent and so suits Naive Bayes well, and this is reflected in the improved performance of Naive Bayes on this version of the dataset.
+
+The decision tree algorithm tries to find binary splits in the values of each attribute to classify instances. After PCA, most of the variation occurs in very few attributes which doesn't leave the decision tree algorithm much to work with.
+
+The SMO algorithm got worse because... TODO
+
+\subsection*{Question iii}
+
+The eigenfaces corresponding to the largest eigenvalues capture gross detail, with successively finer features as one proceeds to smaller eigenvalues.
+
+The largest two eigenvalues are 0.620 and 0.352. The corresponding eigenfaces are an average face, corresponding to the variation in level of global illumination in the dataset, and a face which looks lit from the side, corresponding to the variation in left-right illumination in the images. Only when we get some number of eigenfaces in do we start seeing ones which distinguish between facial features as opposed to illumination; this makes sense since in the dataset the difference between images with different illumination directions is much more dramatic than the difference between two faces under the same illumination.
+
+\subsection*{Question iv}
+Around 10 components are required to produce a face which is clearly recognisable as the original. As we increase the number of components, the face moves away from the average of the underlying faces and gains specific details from the face we are reconstructing.
+
+\subsection*{Question v}
+We remove the four attributes with the largest eigenvalues.
+
+NaiveBayes: 72\% (vs 77\%)
+
+The accuracy has decreased slightly, but as stated before the greatest part of the variation in the dataset is in lighting which is not significant to our classification task, so the attributes we have left still serve well for classifying the data.
+
+\subsection*{Question vi}
+We try running SMO retaining different numbers of the top eigenfaces.
+
+SMO 20 eigenfaces: 73.5\%
+SMO 40 eigenfaces: 90\%
+SMO 80 eigenfaces: 85\%
+SMO 120 eigenfaces: 78\%
+SMO 160 eigenfaces: 63\%
+SMO 200 eigenfaces: 63\%
+
+We notice that there is a peak in performance around 40 attributes, after which performance falls off. This is because TODO.
 
 \end{document}
