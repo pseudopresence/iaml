@@ -145,5 +145,52 @@ We notice that there is a peak in performance around 40 attributes, after which 
 \section*{Part D}
 \subsection*{Question i}
 
+Results at 99% confidence (95% is identical), by dataset:
+Dataset                       NaiveBayes |     J48     SMO
+------------------------------------------------------------
+train_faces_clean           (25)   53.60 |   61.90     88.00 v
+train_faces_clean_best      (25)   63.60 |   64.30     90.10 v
+train_faces_clean_pca       (25)   79.90 |   60.10 *   80.90  
+------------------------------------------------------------
+                                 (v/ /*) |   (0/2/1)   (2/1/0)
+
+We see that for two datasets, train_faces_clean and train_faces_clean_best, SMO does significantly better than NaiveBayes with 99% confidence.
+
+Results at 99% confidence, by algorithm:
+
+Dataset                   train_faces_clean | train_faces_clean_best     train_faces_clean_pca
+----------------------------------------------------------------------------------------------
+NaiveBayes                     (25)   53.60 |                  63.60 v                   79.90 v
+J48                            (25)   61.90 |                  64.30                     60.10  
+SMO                            (25)   88.00 |                  90.10                     80.90  
+----------------------------------------------------------------------------------------------
+                                    (v/ /*) |                  (1/2/0)                   (1/2/0)
+
+We see that for NaiveBayes, train_faces_clean_best and train_faces_clean_pca are both significantly better than train_faces_clean with 99% confidence. For J48, none of the datasets are significantly better than the others.
+
+Based on this, I would select TODO for further experiments. % train_faces_clean_best?
+
+\subsection*{Question ii}
+
+Randomizing the dataset with default seed of 42.
+
+Using RemovePercent, invertselection true, values of 100 to 5.
+
+100\% of Data (200 instances): 92\%
+80\% of Data (160 instances): 87\%
+65\% of Data (130 instances): 86.5\% 
+50\% of Data (100 instances): 84\%
+35\% of Data (70 instances): 76.5\%
+10\% of Data (20 instances): 40\%
+5\% of Data (10 instances): 21.5\%
+
+As we can see from the plot above, the performance is tailing off somewhat as we add more data, but the last 20% of the dataset does provide a reasonably improvement and so a larger dataset could still improve the performance of the classifier.
+
+\subsection*{Question iii}
+Naive Bayes with PCA: 83.5\%
+EM seed default 100, 10 clusters.
+Naive Bayes with PCA and EM clusters: 86.5\%
+
+Adding cluster labels has slightly helped. Although they don't contain any data independent of the original dataset, NaiveBayes assumes all attributes are independent given the class labels, and so doesn't make use of all the information in the original dataset; by adding new features which are distinct from any of the original ones and which are useful in themselves for classification, we can improve the performance of the classifier.
 
 \end{document}

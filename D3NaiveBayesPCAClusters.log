@@ -1,0 +1,1347 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.AddCluster -W \"weka.clusterers.EM -I 100 -N 10 -M 1.0E-6 -S 100\"" -W weka.classifiers.meta.FilteredClassifier -- -F "weka.filters.unsupervised.attribute.PrincipalComponents -R 0.95 -A 5 -M -1" -W weka.classifiers.bayes.NaiveBayes --
+Relation:     train_clean
+Instances:    200
+Attributes:   1025
+              [list of attributes omitted]
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.meta.FilteredClassifier -F "weka.filters.unsupervised.attribute.PrincipalComponents -R 0.95 -A 5 -M -1" -W weka.classifiers.bayes.NaiveBayes -- on data filtered through weka.filters.unsupervised.attribute.AddCluster -W "weka.clusterers.EM -I 100 -N 10 -M 1.0E-6 -S 100"
+
+Filtered Header
+@relation 'train_clean-weka.filters.unsupervised.attribute.AddCluster-Wweka.clusterers.EM -I 100 -N 10 -M 1.0E-6 -S 100'
+
+@attribute pixel_1 numeric
+@attribute pixel_2 numeric
+@attribute pixel_3 numeric
+@attribute pixel_4 numeric
+@attribute pixel_5 numeric
+@attribute pixel_6 numeric
+@attribute pixel_7 numeric
+@attribute pixel_8 numeric
+@attribute pixel_9 numeric
+@attribute pixel_10 numeric
+@attribute pixel_11 numeric
+@attribute pixel_12 numeric
+@attribute pixel_13 numeric
+@attribute pixel_14 numeric
+@attribute pixel_15 numeric
+@attribute pixel_16 numeric
+@attribute pixel_17 numeric
+@attribute pixel_18 numeric
+@attribute pixel_19 numeric
+@attribute pixel_20 numeric
+@attribute pixel_21 numeric
+@attribute pixel_22 numeric
+@attribute pixel_23 numeric
+@attribute pixel_24 numeric
+@attribute pixel_25 numeric
+@attribute pixel_26 numeric
+@attribute pixel_27 numeric
+@attribute pixel_28 numeric
+@attribute pixel_29 numeric
+@attribute pixel_30 numeric
+@attribute pixel_31 numeric
+@attribute pixel_32 numeric
+@attribute pixel_33 numeric
+@attribute pixel_34 numeric
+@attribute pixel_35 numeric
+@attribute pixel_36 numeric
+@attribute pixel_37 numeric
+@attribute pixel_38 numeric
+@attribute pixel_39 numeric
+@attribute pixel_40 numeric
+@attribute pixel_41 numeric
+@attribute pixel_42 numeric
+@attribute pixel_43 numeric
+@attribute pixel_44 numeric
+@attribute pixel_45 numeric
+@attribute pixel_46 numeric
+@attribute pixel_47 numeric
+@attribute pixel_48 numeric
+@attribute pixel_49 numeric
+@attribute pixel_50 numeric
+@attribute pixel_51 numeric
+@attribute pixel_52 numeric
+@attribute pixel_53 numeric
+@attribute pixel_54 numeric
+@attribute pixel_55 numeric
+@attribute pixel_56 numeric
+@attribute pixel_57 numeric
+@attribute pixel_58 numeric
+@attribute pixel_59 numeric
+@attribute pixel_60 numeric
+@attribute pixel_61 numeric
+@attribute pixel_62 numeric
+@attribute pixel_63 numeric
+@attribute pixel_64 numeric
+@attribute pixel_65 numeric
+@attribute pixel_66 numeric
+@attribute pixel_67 numeric
+@attribute pixel_68 numeric
+@attribute pixel_69 numeric
+@attribute pixel_70 numeric
+@attribute pixel_71 numeric
+@attribute pixel_72 numeric
+@attribute pixel_73 numeric
+@attribute pixel_74 numeric
+@attribute pixel_75 numeric
+@attribute pixel_76 numeric
+@attribute pixel_77 numeric
+@attribute pixel_78 numeric
+@attribute pixel_79 numeric
+@attribute pixel_80 numeric
+@attribute pixel_81 numeric
+@attribute pixel_82 numeric
+@attribute pixel_83 numeric
+@attribute pixel_84 numeric
+@attribute pixel_85 numeric
+@attribute pixel_86 numeric
+@attribute pixel_87 numeric
+@attribute pixel_88 numeric
+@attribute pixel_89 numeric
+@attribute pixel_90 numeric
+@attribute pixel_91 numeric
+@attribute pixel_92 numeric
+@attribute pixel_93 numeric
+@attribute pixel_94 numeric
+@attribute pixel_95 numeric
+@attribute pixel_96 numeric
+@attribute pixel_97 numeric
+@attribute pixel_98 numeric
+@attribute pixel_99 numeric
+@attribute pixel_100 numeric
+@attribute pixel_101 numeric
+@attribute pixel_102 numeric
+@attribute pixel_103 numeric
+@attribute pixel_104 numeric
+@attribute pixel_105 numeric
+@attribute pixel_106 numeric
+@attribute pixel_107 numeric
+@attribute pixel_108 numeric
+@attribute pixel_109 numeric
+@attribute pixel_110 numeric
+@attribute pixel_111 numeric
+@attribute pixel_112 numeric
+@attribute pixel_113 numeric
+@attribute pixel_114 numeric
+@attribute pixel_115 numeric
+@attribute pixel_116 numeric
+@attribute pixel_117 numeric
+@attribute pixel_118 numeric
+@attribute pixel_119 numeric
+@attribute pixel_120 numeric
+@attribute pixel_121 numeric
+@attribute pixel_122 numeric
+@attribute pixel_123 numeric
+@attribute pixel_124 numeric
+@attribute pixel_125 numeric
+@attribute pixel_126 numeric
+@attribute pixel_127 numeric
+@attribute pixel_128 numeric
+@attribute pixel_129 numeric
+@attribute pixel_130 numeric
+@attribute pixel_131 numeric
+@attribute pixel_132 numeric
+@attribute pixel_133 numeric
+@attribute pixel_134 numeric
+@attribute pixel_135 numeric
+@attribute pixel_136 numeric
+@attribute pixel_137 numeric
+@attribute pixel_138 numeric
+@attribute pixel_139 numeric
+@attribute pixel_140 numeric
+@attribute pixel_141 numeric
+@attribute pixel_142 numeric
+@attribute pixel_143 numeric
+@attribute pixel_144 numeric
+@attribute pixel_145 numeric
+@attribute pixel_146 numeric
+@attribute pixel_147 numeric
+@attribute pixel_148 numeric
+@attribute pixel_149 numeric
+@attribute pixel_150 numeric
+@attribute pixel_151 numeric
+@attribute pixel_152 numeric
+@attribute pixel_153 numeric
+@attribute pixel_154 numeric
+@attribute pixel_155 numeric
+@attribute pixel_156 numeric
+@attribute pixel_157 numeric
+@attribute pixel_158 numeric
+@attribute pixel_159 numeric
+@attribute pixel_160 numeric
+@attribute pixel_161 numeric
+@attribute pixel_162 numeric
+@attribute pixel_163 numeric
+@attribute pixel_164 numeric
+@attribute pixel_165 numeric
+@attribute pixel_166 numeric
+@attribute pixel_167 numeric
+@attribute pixel_168 numeric
+@attribute pixel_169 numeric
+@attribute pixel_170 numeric
+@attribute pixel_171 numeric
+@attribute pixel_172 numeric
+@attribute pixel_173 numeric
+@attribute pixel_174 numeric
+@attribute pixel_175 numeric
+@attribute pixel_176 numeric
+@attribute pixel_177 numeric
+@attribute pixel_178 numeric
+@attribute pixel_179 numeric
+@attribute pixel_180 numeric
+@attribute pixel_181 numeric
+@attribute pixel_182 numeric
+@attribute pixel_183 numeric
+@attribute pixel_184 numeric
+@attribute pixel_185 numeric
+@attribute pixel_186 numeric
+@attribute pixel_187 numeric
+@attribute pixel_188 numeric
+@attribute pixel_189 numeric
+@attribute pixel_190 numeric
+@attribute pixel_191 numeric
+@attribute pixel_192 numeric
+@attribute pixel_193 numeric
+@attribute pixel_194 numeric
+@attribute pixel_195 numeric
+@attribute pixel_196 numeric
+@attribute pixel_197 numeric
+@attribute pixel_198 numeric
+@attribute pixel_199 numeric
+@attribute pixel_200 numeric
+@attribute pixel_201 numeric
+@attribute pixel_202 numeric
+@attribute pixel_203 numeric
+@attribute pixel_204 numeric
+@attribute pixel_205 numeric
+@attribute pixel_206 numeric
+@attribute pixel_207 numeric
+@attribute pixel_208 numeric
+@attribute pixel_209 numeric
+@attribute pixel_210 numeric
+@attribute pixel_211 numeric
+@attribute pixel_212 numeric
+@attribute pixel_213 numeric
+@attribute pixel_214 numeric
+@attribute pixel_215 numeric
+@attribute pixel_216 numeric
+@attribute pixel_217 numeric
+@attribute pixel_218 numeric
+@attribute pixel_219 numeric
+@attribute pixel_220 numeric
+@attribute pixel_221 numeric
+@attribute pixel_222 numeric
+@attribute pixel_223 numeric
+@attribute pixel_224 numeric
+@attribute pixel_225 numeric
+@attribute pixel_226 numeric
+@attribute pixel_227 numeric
+@attribute pixel_228 numeric
+@attribute pixel_229 numeric
+@attribute pixel_230 numeric
+@attribute pixel_231 numeric
+@attribute pixel_232 numeric
+@attribute pixel_233 numeric
+@attribute pixel_234 numeric
+@attribute pixel_235 numeric
+@attribute pixel_236 numeric
+@attribute pixel_237 numeric
+@attribute pixel_238 numeric
+@attribute pixel_239 numeric
+@attribute pixel_240 numeric
+@attribute pixel_241 numeric
+@attribute pixel_242 numeric
+@attribute pixel_243 numeric
+@attribute pixel_244 numeric
+@attribute pixel_245 numeric
+@attribute pixel_246 numeric
+@attribute pixel_247 numeric
+@attribute pixel_248 numeric
+@attribute pixel_249 numeric
+@attribute pixel_250 numeric
+@attribute pixel_251 numeric
+@attribute pixel_252 numeric
+@attribute pixel_253 numeric
+@attribute pixel_254 numeric
+@attribute pixel_255 numeric
+@attribute pixel_256 numeric
+@attribute pixel_257 numeric
+@attribute pixel_258 numeric
+@attribute pixel_259 numeric
+@attribute pixel_260 numeric
+@attribute pixel_261 numeric
+@attribute pixel_262 numeric
+@attribute pixel_263 numeric
+@attribute pixel_264 numeric
+@attribute pixel_265 numeric
+@attribute pixel_266 numeric
+@attribute pixel_267 numeric
+@attribute pixel_268 numeric
+@attribute pixel_269 numeric
+@attribute pixel_270 numeric
+@attribute pixel_271 numeric
+@attribute pixel_272 numeric
+@attribute pixel_273 numeric
+@attribute pixel_274 numeric
+@attribute pixel_275 numeric
+@attribute pixel_276 numeric
+@attribute pixel_277 numeric
+@attribute pixel_278 numeric
+@attribute pixel_279 numeric
+@attribute pixel_280 numeric
+@attribute pixel_281 numeric
+@attribute pixel_282 numeric
+@attribute pixel_283 numeric
+@attribute pixel_284 numeric
+@attribute pixel_285 numeric
+@attribute pixel_286 numeric
+@attribute pixel_287 numeric
+@attribute pixel_288 numeric
+@attribute pixel_289 numeric
+@attribute pixel_290 numeric
+@attribute pixel_291 numeric
+@attribute pixel_292 numeric
+@attribute pixel_293 numeric
+@attribute pixel_294 numeric
+@attribute pixel_295 numeric
+@attribute pixel_296 numeric
+@attribute pixel_297 numeric
+@attribute pixel_298 numeric
+@attribute pixel_299 numeric
+@attribute pixel_300 numeric
+@attribute pixel_301 numeric
+@attribute pixel_302 numeric
+@attribute pixel_303 numeric
+@attribute pixel_304 numeric
+@attribute pixel_305 numeric
+@attribute pixel_306 numeric
+@attribute pixel_307 numeric
+@attribute pixel_308 numeric
+@attribute pixel_309 numeric
+@attribute pixel_310 numeric
+@attribute pixel_311 numeric
+@attribute pixel_312 numeric
+@attribute pixel_313 numeric
+@attribute pixel_314 numeric
+@attribute pixel_315 numeric
+@attribute pixel_316 numeric
+@attribute pixel_317 numeric
+@attribute pixel_318 numeric
+@attribute pixel_319 numeric
+@attribute pixel_320 numeric
+@attribute pixel_321 numeric
+@attribute pixel_322 numeric
+@attribute pixel_323 numeric
+@attribute pixel_324 numeric
+@attribute pixel_325 numeric
+@attribute pixel_326 numeric
+@attribute pixel_327 numeric
+@attribute pixel_328 numeric
+@attribute pixel_329 numeric
+@attribute pixel_330 numeric
+@attribute pixel_331 numeric
+@attribute pixel_332 numeric
+@attribute pixel_333 numeric
+@attribute pixel_334 numeric
+@attribute pixel_335 numeric
+@attribute pixel_336 numeric
+@attribute pixel_337 numeric
+@attribute pixel_338 numeric
+@attribute pixel_339 numeric
+@attribute pixel_340 numeric
+@attribute pixel_341 numeric
+@attribute pixel_342 numeric
+@attribute pixel_343 numeric
+@attribute pixel_344 numeric
+@attribute pixel_345 numeric
+@attribute pixel_346 numeric
+@attribute pixel_347 numeric
+@attribute pixel_348 numeric
+@attribute pixel_349 numeric
+@attribute pixel_350 numeric
+@attribute pixel_351 numeric
+@attribute pixel_352 numeric
+@attribute pixel_353 numeric
+@attribute pixel_354 numeric
+@attribute pixel_355 numeric
+@attribute pixel_356 numeric
+@attribute pixel_357 numeric
+@attribute pixel_358 numeric
+@attribute pixel_359 numeric
+@attribute pixel_360 numeric
+@attribute pixel_361 numeric
+@attribute pixel_362 numeric
+@attribute pixel_363 numeric
+@attribute pixel_364 numeric
+@attribute pixel_365 numeric
+@attribute pixel_366 numeric
+@attribute pixel_367 numeric
+@attribute pixel_368 numeric
+@attribute pixel_369 numeric
+@attribute pixel_370 numeric
+@attribute pixel_371 numeric
+@attribute pixel_372 numeric
+@attribute pixel_373 numeric
+@attribute pixel_374 numeric
+@attribute pixel_375 numeric
+@attribute pixel_376 numeric
+@attribute pixel_377 numeric
+@attribute pixel_378 numeric
+@attribute pixel_379 numeric
+@attribute pixel_380 numeric
+@attribute pixel_381 numeric
+@attribute pixel_382 numeric
+@attribute pixel_383 numeric
+@attribute pixel_384 numeric
+@attribute pixel_385 numeric
+@attribute pixel_386 numeric
+@attribute pixel_387 numeric
+@attribute pixel_388 numeric
+@attribute pixel_389 numeric
+@attribute pixel_390 numeric
+@attribute pixel_391 numeric
+@attribute pixel_392 numeric
+@attribute pixel_393 numeric
+@attribute pixel_394 numeric
+@attribute pixel_395 numeric
+@attribute pixel_396 numeric
+@attribute pixel_397 numeric
+@attribute pixel_398 numeric
+@attribute pixel_399 numeric
+@attribute pixel_400 numeric
+@attribute pixel_401 numeric
+@attribute pixel_402 numeric
+@attribute pixel_403 numeric
+@attribute pixel_404 numeric
+@attribute pixel_405 numeric
+@attribute pixel_406 numeric
+@attribute pixel_407 numeric
+@attribute pixel_408 numeric
+@attribute pixel_409 numeric
+@attribute pixel_410 numeric
+@attribute pixel_411 numeric
+@attribute pixel_412 numeric
+@attribute pixel_413 numeric
+@attribute pixel_414 numeric
+@attribute pixel_415 numeric
+@attribute pixel_416 numeric
+@attribute pixel_417 numeric
+@attribute pixel_418 numeric
+@attribute pixel_419 numeric
+@attribute pixel_420 numeric
+@attribute pixel_421 numeric
+@attribute pixel_422 numeric
+@attribute pixel_423 numeric
+@attribute pixel_424 numeric
+@attribute pixel_425 numeric
+@attribute pixel_426 numeric
+@attribute pixel_427 numeric
+@attribute pixel_428 numeric
+@attribute pixel_429 numeric
+@attribute pixel_430 numeric
+@attribute pixel_431 numeric
+@attribute pixel_432 numeric
+@attribute pixel_433 numeric
+@attribute pixel_434 numeric
+@attribute pixel_435 numeric
+@attribute pixel_436 numeric
+@attribute pixel_437 numeric
+@attribute pixel_438 numeric
+@attribute pixel_439 numeric
+@attribute pixel_440 numeric
+@attribute pixel_441 numeric
+@attribute pixel_442 numeric
+@attribute pixel_443 numeric
+@attribute pixel_444 numeric
+@attribute pixel_445 numeric
+@attribute pixel_446 numeric
+@attribute pixel_447 numeric
+@attribute pixel_448 numeric
+@attribute pixel_449 numeric
+@attribute pixel_450 numeric
+@attribute pixel_451 numeric
+@attribute pixel_452 numeric
+@attribute pixel_453 numeric
+@attribute pixel_454 numeric
+@attribute pixel_455 numeric
+@attribute pixel_456 numeric
+@attribute pixel_457 numeric
+@attribute pixel_458 numeric
+@attribute pixel_459 numeric
+@attribute pixel_460 numeric
+@attribute pixel_461 numeric
+@attribute pixel_462 numeric
+@attribute pixel_463 numeric
+@attribute pixel_464 numeric
+@attribute pixel_465 numeric
+@attribute pixel_466 numeric
+@attribute pixel_467 numeric
+@attribute pixel_468 numeric
+@attribute pixel_469 numeric
+@attribute pixel_470 numeric
+@attribute pixel_471 numeric
+@attribute pixel_472 numeric
+@attribute pixel_473 numeric
+@attribute pixel_474 numeric
+@attribute pixel_475 numeric
+@attribute pixel_476 numeric
+@attribute pixel_477 numeric
+@attribute pixel_478 numeric
+@attribute pixel_479 numeric
+@attribute pixel_480 numeric
+@attribute pixel_481 numeric
+@attribute pixel_482 numeric
+@attribute pixel_483 numeric
+@attribute pixel_484 numeric
+@attribute pixel_485 numeric
+@attribute pixel_486 numeric
+@attribute pixel_487 numeric
+@attribute pixel_488 numeric
+@attribute pixel_489 numeric
+@attribute pixel_490 numeric
+@attribute pixel_491 numeric
+@attribute pixel_492 numeric
+@attribute pixel_493 numeric
+@attribute pixel_494 numeric
+@attribute pixel_495 numeric
+@attribute pixel_496 numeric
+@attribute pixel_497 numeric
+@attribute pixel_498 numeric
+@attribute pixel_499 numeric
+@attribute pixel_500 numeric
+@attribute pixel_501 numeric
+@attribute pixel_502 numeric
+@attribute pixel_503 numeric
+@attribute pixel_504 numeric
+@attribute pixel_505 numeric
+@attribute pixel_506 numeric
+@attribute pixel_507 numeric
+@attribute pixel_508 numeric
+@attribute pixel_509 numeric
+@attribute pixel_510 numeric
+@attribute pixel_511 numeric
+@attribute pixel_512 numeric
+@attribute pixel_513 numeric
+@attribute pixel_514 numeric
+@attribute pixel_515 numeric
+@attribute pixel_516 numeric
+@attribute pixel_517 numeric
+@attribute pixel_518 numeric
+@attribute pixel_519 numeric
+@attribute pixel_520 numeric
+@attribute pixel_521 numeric
+@attribute pixel_522 numeric
+@attribute pixel_523 numeric
+@attribute pixel_524 numeric
+@attribute pixel_525 numeric
+@attribute pixel_526 numeric
+@attribute pixel_527 numeric
+@attribute pixel_528 numeric
+@attribute pixel_529 numeric
+@attribute pixel_530 numeric
+@attribute pixel_531 numeric
+@attribute pixel_532 numeric
+@attribute pixel_533 numeric
+@attribute pixel_534 numeric
+@attribute pixel_535 numeric
+@attribute pixel_536 numeric
+@attribute pixel_537 numeric
+@attribute pixel_538 numeric
+@attribute pixel_539 numeric
+@attribute pixel_540 numeric
+@attribute pixel_541 numeric
+@attribute pixel_542 numeric
+@attribute pixel_543 numeric
+@attribute pixel_544 numeric
+@attribute pixel_545 numeric
+@attribute pixel_546 numeric
+@attribute pixel_547 numeric
+@attribute pixel_548 numeric
+@attribute pixel_549 numeric
+@attribute pixel_550 numeric
+@attribute pixel_551 numeric
+@attribute pixel_552 numeric
+@attribute pixel_553 numeric
+@attribute pixel_554 numeric
+@attribute pixel_555 numeric
+@attribute pixel_556 numeric
+@attribute pixel_557 numeric
+@attribute pixel_558 numeric
+@attribute pixel_559 numeric
+@attribute pixel_560 numeric
+@attribute pixel_561 numeric
+@attribute pixel_562 numeric
+@attribute pixel_563 numeric
+@attribute pixel_564 numeric
+@attribute pixel_565 numeric
+@attribute pixel_566 numeric
+@attribute pixel_567 numeric
+@attribute pixel_568 numeric
+@attribute pixel_569 numeric
+@attribute pixel_570 numeric
+@attribute pixel_571 numeric
+@attribute pixel_572 numeric
+@attribute pixel_573 numeric
+@attribute pixel_574 numeric
+@attribute pixel_575 numeric
+@attribute pixel_576 numeric
+@attribute pixel_577 numeric
+@attribute pixel_578 numeric
+@attribute pixel_579 numeric
+@attribute pixel_580 numeric
+@attribute pixel_581 numeric
+@attribute pixel_582 numeric
+@attribute pixel_583 numeric
+@attribute pixel_584 numeric
+@attribute pixel_585 numeric
+@attribute pixel_586 numeric
+@attribute pixel_587 numeric
+@attribute pixel_588 numeric
+@attribute pixel_589 numeric
+@attribute pixel_590 numeric
+@attribute pixel_591 numeric
+@attribute pixel_592 numeric
+@attribute pixel_593 numeric
+@attribute pixel_594 numeric
+@attribute pixel_595 numeric
+@attribute pixel_596 numeric
+@attribute pixel_597 numeric
+@attribute pixel_598 numeric
+@attribute pixel_599 numeric
+@attribute pixel_600 numeric
+@attribute pixel_601 numeric
+@attribute pixel_602 numeric
+@attribute pixel_603 numeric
+@attribute pixel_604 numeric
+@attribute pixel_605 numeric
+@attribute pixel_606 numeric
+@attribute pixel_607 numeric
+@attribute pixel_608 numeric
+@attribute pixel_609 numeric
+@attribute pixel_610 numeric
+@attribute pixel_611 numeric
+@attribute pixel_612 numeric
+@attribute pixel_613 numeric
+@attribute pixel_614 numeric
+@attribute pixel_615 numeric
+@attribute pixel_616 numeric
+@attribute pixel_617 numeric
+@attribute pixel_618 numeric
+@attribute pixel_619 numeric
+@attribute pixel_620 numeric
+@attribute pixel_621 numeric
+@attribute pixel_622 numeric
+@attribute pixel_623 numeric
+@attribute pixel_624 numeric
+@attribute pixel_625 numeric
+@attribute pixel_626 numeric
+@attribute pixel_627 numeric
+@attribute pixel_628 numeric
+@attribute pixel_629 numeric
+@attribute pixel_630 numeric
+@attribute pixel_631 numeric
+@attribute pixel_632 numeric
+@attribute pixel_633 numeric
+@attribute pixel_634 numeric
+@attribute pixel_635 numeric
+@attribute pixel_636 numeric
+@attribute pixel_637 numeric
+@attribute pixel_638 numeric
+@attribute pixel_639 numeric
+@attribute pixel_640 numeric
+@attribute pixel_641 numeric
+@attribute pixel_642 numeric
+@attribute pixel_643 numeric
+@attribute pixel_644 numeric
+@attribute pixel_645 numeric
+@attribute pixel_646 numeric
+@attribute pixel_647 numeric
+@attribute pixel_648 numeric
+@attribute pixel_649 numeric
+@attribute pixel_650 numeric
+@attribute pixel_651 numeric
+@attribute pixel_652 numeric
+@attribute pixel_653 numeric
+@attribute pixel_654 numeric
+@attribute pixel_655 numeric
+@attribute pixel_656 numeric
+@attribute pixel_657 numeric
+@attribute pixel_658 numeric
+@attribute pixel_659 numeric
+@attribute pixel_660 numeric
+@attribute pixel_661 numeric
+@attribute pixel_662 numeric
+@attribute pixel_663 numeric
+@attribute pixel_664 numeric
+@attribute pixel_665 numeric
+@attribute pixel_666 numeric
+@attribute pixel_667 numeric
+@attribute pixel_668 numeric
+@attribute pixel_669 numeric
+@attribute pixel_670 numeric
+@attribute pixel_671 numeric
+@attribute pixel_672 numeric
+@attribute pixel_673 numeric
+@attribute pixel_674 numeric
+@attribute pixel_675 numeric
+@attribute pixel_676 numeric
+@attribute pixel_677 numeric
+@attribute pixel_678 numeric
+@attribute pixel_679 numeric
+@attribute pixel_680 numeric
+@attribute pixel_681 numeric
+@attribute pixel_682 numeric
+@attribute pixel_683 numeric
+@attribute pixel_684 numeric
+@attribute pixel_685 numeric
+@attribute pixel_686 numeric
+@attribute pixel_687 numeric
+@attribute pixel_688 numeric
+@attribute pixel_689 numeric
+@attribute pixel_690 numeric
+@attribute pixel_691 numeric
+@attribute pixel_692 numeric
+@attribute pixel_693 numeric
+@attribute pixel_694 numeric
+@attribute pixel_695 numeric
+@attribute pixel_696 numeric
+@attribute pixel_697 numeric
+@attribute pixel_698 numeric
+@attribute pixel_699 numeric
+@attribute pixel_700 numeric
+@attribute pixel_701 numeric
+@attribute pixel_702 numeric
+@attribute pixel_703 numeric
+@attribute pixel_704 numeric
+@attribute pixel_705 numeric
+@attribute pixel_706 numeric
+@attribute pixel_707 numeric
+@attribute pixel_708 numeric
+@attribute pixel_709 numeric
+@attribute pixel_710 numeric
+@attribute pixel_711 numeric
+@attribute pixel_712 numeric
+@attribute pixel_713 numeric
+@attribute pixel_714 numeric
+@attribute pixel_715 numeric
+@attribute pixel_716 numeric
+@attribute pixel_717 numeric
+@attribute pixel_718 numeric
+@attribute pixel_719 numeric
+@attribute pixel_720 numeric
+@attribute pixel_721 numeric
+@attribute pixel_722 numeric
+@attribute pixel_723 numeric
+@attribute pixel_724 numeric
+@attribute pixel_725 numeric
+@attribute pixel_726 numeric
+@attribute pixel_727 numeric
+@attribute pixel_728 numeric
+@attribute pixel_729 numeric
+@attribute pixel_730 numeric
+@attribute pixel_731 numeric
+@attribute pixel_732 numeric
+@attribute pixel_733 numeric
+@attribute pixel_734 numeric
+@attribute pixel_735 numeric
+@attribute pixel_736 numeric
+@attribute pixel_737 numeric
+@attribute pixel_738 numeric
+@attribute pixel_739 numeric
+@attribute pixel_740 numeric
+@attribute pixel_741 numeric
+@attribute pixel_742 numeric
+@attribute pixel_743 numeric
+@attribute pixel_744 numeric
+@attribute pixel_745 numeric
+@attribute pixel_746 numeric
+@attribute pixel_747 numeric
+@attribute pixel_748 numeric
+@attribute pixel_749 numeric
+@attribute pixel_750 numeric
+@attribute pixel_751 numeric
+@attribute pixel_752 numeric
+@attribute pixel_753 numeric
+@attribute pixel_754 numeric
+@attribute pixel_755 numeric
+@attribute pixel_756 numeric
+@attribute pixel_757 numeric
+@attribute pixel_758 numeric
+@attribute pixel_759 numeric
+@attribute pixel_760 numeric
+@attribute pixel_761 numeric
+@attribute pixel_762 numeric
+@attribute pixel_763 numeric
+@attribute pixel_764 numeric
+@attribute pixel_765 numeric
+@attribute pixel_766 numeric
+@attribute pixel_767 numeric
+@attribute pixel_768 numeric
+@attribute pixel_769 numeric
+@attribute pixel_770 numeric
+@attribute pixel_771 numeric
+@attribute pixel_772 numeric
+@attribute pixel_773 numeric
+@attribute pixel_774 numeric
+@attribute pixel_775 numeric
+@attribute pixel_776 numeric
+@attribute pixel_777 numeric
+@attribute pixel_778 numeric
+@attribute pixel_779 numeric
+@attribute pixel_780 numeric
+@attribute pixel_781 numeric
+@attribute pixel_782 numeric
+@attribute pixel_783 numeric
+@attribute pixel_784 numeric
+@attribute pixel_785 numeric
+@attribute pixel_786 numeric
+@attribute pixel_787 numeric
+@attribute pixel_788 numeric
+@attribute pixel_789 numeric
+@attribute pixel_790 numeric
+@attribute pixel_791 numeric
+@attribute pixel_792 numeric
+@attribute pixel_793 numeric
+@attribute pixel_794 numeric
+@attribute pixel_795 numeric
+@attribute pixel_796 numeric
+@attribute pixel_797 numeric
+@attribute pixel_798 numeric
+@attribute pixel_799 numeric
+@attribute pixel_800 numeric
+@attribute pixel_801 numeric
+@attribute pixel_802 numeric
+@attribute pixel_803 numeric
+@attribute pixel_804 numeric
+@attribute pixel_805 numeric
+@attribute pixel_806 numeric
+@attribute pixel_807 numeric
+@attribute pixel_808 numeric
+@attribute pixel_809 numeric
+@attribute pixel_810 numeric
+@attribute pixel_811 numeric
+@attribute pixel_812 numeric
+@attribute pixel_813 numeric
+@attribute pixel_814 numeric
+@attribute pixel_815 numeric
+@attribute pixel_816 numeric
+@attribute pixel_817 numeric
+@attribute pixel_818 numeric
+@attribute pixel_819 numeric
+@attribute pixel_820 numeric
+@attribute pixel_821 numeric
+@attribute pixel_822 numeric
+@attribute pixel_823 numeric
+@attribute pixel_824 numeric
+@attribute pixel_825 numeric
+@attribute pixel_826 numeric
+@attribute pixel_827 numeric
+@attribute pixel_828 numeric
+@attribute pixel_829 numeric
+@attribute pixel_830 numeric
+@attribute pixel_831 numeric
+@attribute pixel_832 numeric
+@attribute pixel_833 numeric
+@attribute pixel_834 numeric
+@attribute pixel_835 numeric
+@attribute pixel_836 numeric
+@attribute pixel_837 numeric
+@attribute pixel_838 numeric
+@attribute pixel_839 numeric
+@attribute pixel_840 numeric
+@attribute pixel_841 numeric
+@attribute pixel_842 numeric
+@attribute pixel_843 numeric
+@attribute pixel_844 numeric
+@attribute pixel_845 numeric
+@attribute pixel_846 numeric
+@attribute pixel_847 numeric
+@attribute pixel_848 numeric
+@attribute pixel_849 numeric
+@attribute pixel_850 numeric
+@attribute pixel_851 numeric
+@attribute pixel_852 numeric
+@attribute pixel_853 numeric
+@attribute pixel_854 numeric
+@attribute pixel_855 numeric
+@attribute pixel_856 numeric
+@attribute pixel_857 numeric
+@attribute pixel_858 numeric
+@attribute pixel_859 numeric
+@attribute pixel_860 numeric
+@attribute pixel_861 numeric
+@attribute pixel_862 numeric
+@attribute pixel_863 numeric
+@attribute pixel_864 numeric
+@attribute pixel_865 numeric
+@attribute pixel_866 numeric
+@attribute pixel_867 numeric
+@attribute pixel_868 numeric
+@attribute pixel_869 numeric
+@attribute pixel_870 numeric
+@attribute pixel_871 numeric
+@attribute pixel_872 numeric
+@attribute pixel_873 numeric
+@attribute pixel_874 numeric
+@attribute pixel_875 numeric
+@attribute pixel_876 numeric
+@attribute pixel_877 numeric
+@attribute pixel_878 numeric
+@attribute pixel_879 numeric
+@attribute pixel_880 numeric
+@attribute pixel_881 numeric
+@attribute pixel_882 numeric
+@attribute pixel_883 numeric
+@attribute pixel_884 numeric
+@attribute pixel_885 numeric
+@attribute pixel_886 numeric
+@attribute pixel_887 numeric
+@attribute pixel_888 numeric
+@attribute pixel_889 numeric
+@attribute pixel_890 numeric
+@attribute pixel_891 numeric
+@attribute pixel_892 numeric
+@attribute pixel_893 numeric
+@attribute pixel_894 numeric
+@attribute pixel_895 numeric
+@attribute pixel_896 numeric
+@attribute pixel_897 numeric
+@attribute pixel_898 numeric
+@attribute pixel_899 numeric
+@attribute pixel_900 numeric
+@attribute pixel_901 numeric
+@attribute pixel_902 numeric
+@attribute pixel_903 numeric
+@attribute pixel_904 numeric
+@attribute pixel_905 numeric
+@attribute pixel_906 numeric
+@attribute pixel_907 numeric
+@attribute pixel_908 numeric
+@attribute pixel_909 numeric
+@attribute pixel_910 numeric
+@attribute pixel_911 numeric
+@attribute pixel_912 numeric
+@attribute pixel_913 numeric
+@attribute pixel_914 numeric
+@attribute pixel_915 numeric
+@attribute pixel_916 numeric
+@attribute pixel_917 numeric
+@attribute pixel_918 numeric
+@attribute pixel_919 numeric
+@attribute pixel_920 numeric
+@attribute pixel_921 numeric
+@attribute pixel_922 numeric
+@attribute pixel_923 numeric
+@attribute pixel_924 numeric
+@attribute pixel_925 numeric
+@attribute pixel_926 numeric
+@attribute pixel_927 numeric
+@attribute pixel_928 numeric
+@attribute pixel_929 numeric
+@attribute pixel_930 numeric
+@attribute pixel_931 numeric
+@attribute pixel_932 numeric
+@attribute pixel_933 numeric
+@attribute pixel_934 numeric
+@attribute pixel_935 numeric
+@attribute pixel_936 numeric
+@attribute pixel_937 numeric
+@attribute pixel_938 numeric
+@attribute pixel_939 numeric
+@attribute pixel_940 numeric
+@attribute pixel_941 numeric
+@attribute pixel_942 numeric
+@attribute pixel_943 numeric
+@attribute pixel_944 numeric
+@attribute pixel_945 numeric
+@attribute pixel_946 numeric
+@attribute pixel_947 numeric
+@attribute pixel_948 numeric
+@attribute pixel_949 numeric
+@attribute pixel_950 numeric
+@attribute pixel_951 numeric
+@attribute pixel_952 numeric
+@attribute pixel_953 numeric
+@attribute pixel_954 numeric
+@attribute pixel_955 numeric
+@attribute pixel_956 numeric
+@attribute pixel_957 numeric
+@attribute pixel_958 numeric
+@attribute pixel_959 numeric
+@attribute pixel_960 numeric
+@attribute pixel_961 numeric
+@attribute pixel_962 numeric
+@attribute pixel_963 numeric
+@attribute pixel_964 numeric
+@attribute pixel_965 numeric
+@attribute pixel_966 numeric
+@attribute pixel_967 numeric
+@attribute pixel_968 numeric
+@attribute pixel_969 numeric
+@attribute pixel_970 numeric
+@attribute pixel_971 numeric
+@attribute pixel_972 numeric
+@attribute pixel_973 numeric
+@attribute pixel_974 numeric
+@attribute pixel_975 numeric
+@attribute pixel_976 numeric
+@attribute pixel_977 numeric
+@attribute pixel_978 numeric
+@attribute pixel_979 numeric
+@attribute pixel_980 numeric
+@attribute pixel_981 numeric
+@attribute pixel_982 numeric
+@attribute pixel_983 numeric
+@attribute pixel_984 numeric
+@attribute pixel_985 numeric
+@attribute pixel_986 numeric
+@attribute pixel_987 numeric
+@attribute pixel_988 numeric
+@attribute pixel_989 numeric
+@attribute pixel_990 numeric
+@attribute pixel_991 numeric
+@attribute pixel_992 numeric
+@attribute pixel_993 numeric
+@attribute pixel_994 numeric
+@attribute pixel_995 numeric
+@attribute pixel_996 numeric
+@attribute pixel_997 numeric
+@attribute pixel_998 numeric
+@attribute pixel_999 numeric
+@attribute pixel_1000 numeric
+@attribute pixel_1001 numeric
+@attribute pixel_1002 numeric
+@attribute pixel_1003 numeric
+@attribute pixel_1004 numeric
+@attribute pixel_1005 numeric
+@attribute pixel_1006 numeric
+@attribute pixel_1007 numeric
+@attribute pixel_1008 numeric
+@attribute pixel_1009 numeric
+@attribute pixel_1010 numeric
+@attribute pixel_1011 numeric
+@attribute pixel_1012 numeric
+@attribute pixel_1013 numeric
+@attribute pixel_1014 numeric
+@attribute pixel_1015 numeric
+@attribute pixel_1016 numeric
+@attribute pixel_1017 numeric
+@attribute pixel_1018 numeric
+@attribute pixel_1019 numeric
+@attribute pixel_1020 numeric
+@attribute pixel_1021 numeric
+@attribute pixel_1022 numeric
+@attribute pixel_1023 numeric
+@attribute pixel_1024 numeric
+@attribute class {1,2,3,4,5,6,7,8,9,10}
+@attribute cluster {cluster1,cluster2,cluster3,cluster4,cluster5,cluster6,cluster7,cluster8,cluster9,cluster10}
+
+@data
+
+
+Classifier Model
+FilteredClassifier using weka.classifiers.bayes.NaiveBayes  on data filtered through weka.filters.unsupervised.attribute.PrincipalComponents -R 0.95 -A 5 -M -1
+
+Filtered Header
+@relation 'train_clean-weka.filters.unsupervised.attribute.AddCluster-Wweka.clusterers.EM -I 100 -N 10 -M 1.0E-6 -S 100_principal components-weka.filters.unsupervised.attribute.PrincipalComponents-R0.95-A5-M-1'
+
+@attribute -0.047pixel_576-0.047pixel_516-0.047pixel_786-0.047pixel_544-0.046pixel_548... numeric
+@attribute -0.05pixel_48-0.05pixel_16-0.05pixel_17-0.05pixel_18-0.05pixel_49... numeric
+@attribute 0.089pixel_525+0.089pixel_526+0.088pixel_523+0.087pixel_524+0.086pixel_522... numeric
+@attribute -0.081pixel_323-0.079pixel_291-0.076pixel_388-0.073pixel_355-0.073pixel_259... numeric
+@attribute -0.113pixel_834-0.111pixel_802-0.107pixel_866+0.105pixel_229+0.104pixel_230... numeric
+@attribute -0.102pixel_99-0.09pixel_935-0.089pixel_67-0.086pixel_98-0.082pixel_131... numeric
+@attribute -0.143pixel_260-0.14pixel_228-0.138pixel_772-0.136pixel_292-0.131pixel_804... numeric
+@attribute -0.15cluster=cluster10+0.117pixel_1023+0.106pixel_1022+0.103pixel_1020+0.101pixel_996... numeric
+@attribute 0.126pixel_809+0.119pixel_840+0.115pixel_776+0.111pixel_777+0.108pixel_233... numeric
+@attribute 0.117pixel_263+0.087pixel_411+0.082pixel_443-0.082pixel_646+0.076pixel_938... numeric
+@attribute 0.123pixel_231+0.113cluster=cluster2-0.111pixel_808+0.103pixel_806+0.102pixel_199... numeric
+@attribute 0.147pixel_401+0.115pixel_433+0.109pixel_498+0.102pixel_497+0.096pixel_530... numeric
+@attribute 0.127pixel_166+0.127pixel_134+0.124pixel_71+0.114pixel_102+0.103pixel_198... numeric
+@attribute '0.09 pixel_604+0.088pixel_636+0.088pixel_502+0.087pixel_629-0.086pixel_593...' numeric
+@attribute 0.123pixel_520+0.113pixel_519+0.108pixel_551-0.106pixel_478-0.104pixel_1024... numeric
+@attribute -0.119pixel_538+0.099pixel_233-0.098pixel_872-0.097pixel_474-0.095pixel_570... numeric
+@attribute -0.162cluster=cluster1+0.122pixel_638+0.116pixel_670+0.106pixel_606-0.104pixel_807... numeric
+@attribute 0.116pixel_626+0.108pixel_962+0.105pixel_426+0.105pixel_871+0.099pixel_930... numeric
+@attribute 0.128pixel_403+0.116pixel_62+0.113pixel_281+0.108pixel_63+0.107pixel_29... numeric
+@attribute 0.129pixel_433+0.117pixel_496+0.116pixel_464+0.107cluster=cluster8+0.105pixel_807... numeric
+@attribute 0.137pixel_1023+0.114pixel_1024+0.112pixel_264+0.112pixel_839+0.111pixel_992... numeric
+@attribute 0.156pixel_295-0.142cluster=cluster9+0.121pixel_743-0.112cluster=cluster5+0.108pixel_403... numeric
+@attribute -0.145pixel_337+0.124pixel_690+0.123pixel_403+0.116pixel_625+0.116cluster=cluster3... numeric
+@attribute 0.142pixel_338+0.135pixel_337+0.122pixel_872-0.109cluster=cluster3-0.1cluster=cluster4... numeric
+@attribute 0.126pixel_409-0.124pixel_729-0.118pixel_665-0.11pixel_839-0.105pixel_807... numeric
+@attribute '-0.166cluster=cluster6-0.12pixel_434+0.12 cluster=cluster3-0.107pixel_358+0.098cluster=cluster7...' numeric
+@attribute -0.156pixel_807-0.122pixel_1024+0.118pixel_391+0.109cluster=cluster1-0.107pixel_312... numeric
+@attribute '-0.132pixel_592-0.126pixel_560-0.125pixel_665-0.121pixel_378+0.12 pixel_690...' numeric
+@attribute -0.123pixel_402-0.113pixel_312-0.112pixel_370-0.111pixel_280-0.106pixel_625... numeric
+@attribute '0.187cluster=cluster5-0.126pixel_401-0.117cluster=cluster4+0.11 pixel_625-0.105pixel_345...' numeric
+@attribute 0.136cluster=cluster9-0.133cluster=cluster1-0.121pixel_104-0.121pixel_648-0.106pixel_679... numeric
+@attribute 0.205cluster=cluster9-0.175cluster=cluster8-0.12cluster=cluster5+0.117pixel_625+0.107pixel_167... numeric
+@attribute 0.123cluster=cluster7-0.115pixel_103+0.097pixel_401-0.094pixel_166+0.093pixel_903... numeric
+@attribute 0.141cluster=cluster8-0.125pixel_745+0.125cluster=cluster7+0.119pixel_903-0.117pixel_904... numeric
+@attribute class {1,2,3,4,5,6,7,8,9,10}
+
+@data
+
+
+Classifier Model
+Naive Bayes Classifier
+
+                                                                                                       Class
+Attribute                                                                                                  1       2       3       4       5       6       7       8       9      10
+                                                                                                       (0.1)   (0.1)   (0.1)   (0.1)   (0.1)   (0.1)   (0.1)   (0.1)   (0.1)   (0.1)
+=====================================================================================================================================================================================
+-0.047pixel_576-0.047pixel_516-0.047pixel_786-0.047pixel_544-0.046pixel_548...
+  mean                                                                                               -10.1771 -9.9267 -9.2227 -8.5943 -7.3092-10.8905 -6.8414 -6.7564 -7.7911-11.1362
+  std. dev.                                                                                            6.1238  5.9534  6.3551  3.9455  5.0235  4.8777  4.1648  4.1937  3.2583  5.1763
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0945  0.0945  0.0945  0.0945  0.0945  0.0945  0.0945  0.0945  0.0945  0.0945
+
+-0.05pixel_48-0.05pixel_16-0.05pixel_17-0.05pixel_18-0.05pixel_49...
+  mean                                                                                                -1.5342  0.1848 -0.4704 -0.3584 -0.3976 -1.9598 -0.2016 -0.4927 -0.8455 -3.5724
+  std. dev.                                                                                            3.9044  4.0918  5.0419  2.7115  3.9187  3.8184  4.5664  3.6987  4.9518  6.5585
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                             0.112   0.112   0.112   0.112   0.112   0.112   0.112   0.112   0.112   0.112
+
+0.089pixel_525+0.089pixel_526+0.088pixel_523+0.087pixel_524+0.086pixel_522...
+  mean                                                                                                 0.5792 -0.7182  0.8224  0.2803 -0.5352  0.2433 -0.0417  0.8641  1.5383  0.7251
+  std. dev.                                                                                            1.9812  1.6861  1.6516  1.4533  1.4984  2.3734  1.5367  1.7369  2.2113   2.625
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0463  0.0463  0.0463  0.0463  0.0463  0.0463  0.0463  0.0463  0.0463  0.0463
+
+-0.081pixel_323-0.079pixel_291-0.076pixel_388-0.073pixel_355-0.073pixel_259...
+  mean                                                                                                 1.7763  3.3232  2.4748  1.0725  2.7535  2.4801  1.8027  1.7622  2.0479  3.4644
+  std. dev.                                                                                            1.1846  1.5159  1.2013  0.8299  0.8263  1.2118  1.3312  1.2345   1.495  1.8486
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0353  0.0353  0.0353  0.0353  0.0353  0.0353  0.0353  0.0353  0.0353  0.0353
+
+-0.113pixel_834-0.111pixel_802-0.107pixel_866+0.105pixel_229+0.104pixel_230...
+  mean                                                                                                -1.5659  0.4894 -1.5979 -1.6452  0.7959 -0.1708 -1.6009 -0.9926  -1.357 -1.7656
+  std. dev.                                                                                            0.4764  1.0656  0.7027  0.6494  1.3352  0.9421  0.4474  0.6466  0.6657  0.7571
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0305  0.0305  0.0305  0.0305  0.0305  0.0305  0.0305  0.0305  0.0305  0.0305
+
+-0.102pixel_99-0.09pixel_935-0.089pixel_67-0.086pixel_98-0.082pixel_131...
+  mean                                                                                                -1.2615 -0.4814 -0.4723 -0.8532 -0.9067 -0.1879  -0.818  -0.047 -0.9171 -0.4892
+  std. dev.                                                                                             0.731  0.8126  1.1863  0.6405  1.0957   0.805  1.0238  0.8104  1.1759  1.2437
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0261  0.0261  0.0261  0.0261  0.0261  0.0261  0.0261  0.0261  0.0261  0.0261
+
+-0.143pixel_260-0.14pixel_228-0.138pixel_772-0.136pixel_292-0.131pixel_804...
+  mean                                                                                                -0.4763 -0.9149 -0.3409 -1.0093 -0.3353  0.7806 -0.5474  0.7006  0.4031  0.9072
+  std. dev.                                                                                            0.3842  0.6641  0.4898   0.919  0.6878   0.526  0.7208  0.5434  0.5432  0.7545
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0222  0.0222  0.0222  0.0222  0.0222  0.0222  0.0222  0.0222  0.0222  0.0222
+
+-0.15cluster=cluster10+0.117pixel_1023+0.106pixel_1022+0.103pixel_1020+0.101pixel_996...
+  mean                                                                                                -0.1383  0.7437 -0.2541  0.6253 -0.8321   0.218  0.3176  0.3475 -0.1308  0.3052
+  std. dev.                                                                                            0.9435  0.6371  0.9052  0.4253  0.8918  0.8628  0.7908  0.7368  0.7501  0.9919
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0249  0.0249  0.0249  0.0249  0.0249  0.0249  0.0249  0.0249  0.0249  0.0249
+
+0.126pixel_809+0.119pixel_840+0.115pixel_776+0.111pixel_777+0.108pixel_233...
+  mean                                                                                                 0.0501 -0.0776  0.4857 -0.8588 -1.0654 -0.4044 -0.7424 -0.7624 -1.8729 -0.2729
+  std. dev.                                                                                            0.4988  0.3342  0.5857  0.4286  0.7053  0.5029  0.7309  0.4019  0.9573   0.523
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                             0.025   0.025   0.025   0.025   0.025   0.025   0.025   0.025   0.025   0.025
+
+0.117pixel_263+0.087pixel_411+0.082pixel_443-0.082pixel_646+0.076pixel_938...
+  mean                                                                                                 0.2994  -0.676  0.1291 -0.3043  0.5997 -1.1525 -0.3473 -0.3033 -0.6261 -0.2123
+  std. dev.                                                                                            0.4093  1.1563   0.582  0.6006  0.7085   0.747  0.4861  0.6964  0.5422  0.5289
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0196  0.0196  0.0196  0.0196  0.0196  0.0196  0.0196  0.0196  0.0196  0.0196
+
+0.123pixel_231+0.113cluster=cluster2-0.111pixel_808+0.103pixel_806+0.102pixel_199...
+  mean                                                                                                 1.0253 -0.0246 -0.0217 -0.2994 -0.6511  0.9288  0.1674 -0.1714  0.1773 -0.4186
+  std. dev.                                                                                            0.5162  0.3149  0.5911  0.3076  0.6516  0.6542  0.2637  0.4614  0.4302  0.5028
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0197  0.0197  0.0197  0.0197  0.0197  0.0197  0.0197  0.0197  0.0197  0.0197
+
+0.147pixel_401+0.115pixel_433+0.109pixel_498+0.102pixel_497+0.096pixel_530...
+  mean                                                                                                 1.0379  1.0626  0.9924  0.1714  0.3697  0.3893  0.3552  0.9914  1.5873  0.4203
+  std. dev.                                                                                            0.6379  0.4109  0.5999  0.2332  0.4869  0.3459  0.2324  0.3393  0.8102  0.8121
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0207  0.0207  0.0207  0.0207  0.0207  0.0207  0.0207  0.0207  0.0207  0.0207
+
+0.127pixel_166+0.127pixel_134+0.124pixel_71+0.114pixel_102+0.103pixel_198...
+  mean                                                                                                 0.6951 -0.0743  -0.047  0.0732  0.6153  0.4787  0.2743 -0.1596  0.4044  0.1191
+  std. dev.                                                                                            0.4026  0.5807  0.3266  0.2989  1.3113  0.2784   0.385  0.3556  0.3036  0.3956
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0219  0.0219  0.0219  0.0219  0.0219  0.0219  0.0219  0.0219  0.0219  0.0219
+
+0.09 pixel_604+0.088pixel_636+0.088pixel_502+0.087pixel_629-0.086pixel_593...
+  mean                                                                                                  0.482  0.1766 -0.2348  0.5746  0.4448  0.7425   0.879  0.3407 -0.3188  0.5144
+  std. dev.                                                                                            0.3912  0.9613  0.5034  0.3474  0.3074  0.3812  0.3521  0.4061  0.6283  0.4833
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0191  0.0191  0.0191  0.0191  0.0191  0.0191  0.0191  0.0191  0.0191  0.0191
+
+0.123pixel_520+0.113pixel_519+0.108pixel_551-0.106pixel_478-0.104pixel_1024...
+  mean                                                                                                -0.1907  0.1496  -0.517 -0.1997 -0.3321 -0.5433 -0.2688 -0.0912 -0.2482 -0.2474
+  std. dev.                                                                                            0.3522  0.6192  0.3327  0.4049  0.6515  0.9494   0.551  0.5458  0.7143  0.4343
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0164  0.0164  0.0164  0.0164  0.0164  0.0164  0.0164  0.0164  0.0164  0.0164
+
+-0.119pixel_538+0.099pixel_233-0.098pixel_872-0.097pixel_474-0.095pixel_570...
+  mean                                                                                                 0.4016  0.4301  0.2138  0.3345  0.2264  0.2339  0.2532  0.4292  0.1626  0.4594
+  std. dev.                                                                                            0.4147  0.5185  0.6157  0.6233  0.3576  0.3471  0.5747  0.3067  0.7865  0.8661
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168
+
+-0.162cluster=cluster1+0.122pixel_638+0.116pixel_670+0.106pixel_606-0.104pixel_807...
+  mean                                                                                                -0.1011 -0.3336 -0.0126 -0.3294  0.1719 -0.0118  0.0489 -0.6849  0.0531  0.1828
+  std. dev.                                                                                            0.3844  0.3518  0.2587  0.8624  0.4873  0.2695  0.7284  0.4822  0.3157    0.37
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168  0.0168
+
+0.116pixel_626+0.108pixel_962+0.105pixel_426+0.105pixel_871+0.099pixel_930...
+  mean                                                                                                -0.1735 -0.4555  0.3107 -0.0198 -0.2042  0.0471  0.1325   0.306 -0.3668 -0.2022
+  std. dev.                                                                                            0.4268  0.7207  0.3777  0.1855  0.7244  0.3999  0.2603  0.3526  0.2821  0.5521
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137
+
+0.128pixel_403+0.116pixel_62+0.113pixel_281+0.108pixel_63+0.107pixel_29...
+  mean                                                                                                 0.2096  0.1733 -0.2439  -0.274 -0.2041 -0.1747  0.0247  0.0219  0.0575   0.374
+  std. dev.                                                                                            0.2484  0.3762  0.7857  0.2045  0.5065  0.5347  0.3491  0.3962  0.3411  0.4869
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137  0.0137
+
+0.129pixel_433+0.117pixel_496+0.116pixel_464+0.107cluster=cluster8+0.105pixel_807...
+  mean                                                                                                 0.3083  0.1784  0.3654  0.2731  0.4145  0.3617  0.4655  0.4855  0.2749  0.1997
+  std. dev.                                                                                            0.3238  0.4368  0.4846  0.3381  0.5333  0.3872  0.4096   0.542  0.7399   0.335
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0121  0.0121  0.0121  0.0121  0.0121  0.0121  0.0121  0.0121  0.0121  0.0121
+
+0.137pixel_1023+0.114pixel_1024+0.112pixel_264+0.112pixel_839+0.111pixel_992...
+  mean                                                                                                -0.1285  0.1644 -0.1303  0.0179 -0.1267 -0.0311  0.5338 -0.1865  0.2032  0.3012
+  std. dev.                                                                                            0.2607  0.1494  0.5075  0.4711  0.4676  0.4394  0.3907  0.3664    0.47  0.3105
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                             0.012   0.012   0.012   0.012   0.012   0.012   0.012   0.012   0.012   0.012
+
+0.156pixel_295-0.142cluster=cluster9+0.121pixel_743-0.112cluster=cluster5+0.108pixel_403...
+  mean                                                                                                -0.1913 -0.1716 -0.2853 -0.1926 -0.1045 -0.3464 -0.2281  0.1459 -0.2511 -0.3188
+  std. dev.                                                                                            0.4159  0.2636  0.4682  0.3252  0.3632  0.3906  0.4364  0.4489  0.3769  0.6103
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0131  0.0131  0.0131  0.0131  0.0131  0.0131  0.0131  0.0131  0.0131  0.0131
+
+-0.145pixel_337+0.124pixel_690+0.123pixel_403+0.116pixel_625+0.116cluster=cluster3...
+  mean                                                                                                 -0.119  -0.067 -0.0685   -0.18 -0.0489  -0.006   -0.07  0.1589  0.0143 -0.0211
+  std. dev.                                                                                            0.3014  0.3997  0.5458  0.3293  0.2948  0.4907  0.3804  0.6888  0.4862  0.4644
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0151  0.0151  0.0151  0.0151  0.0151  0.0151  0.0151  0.0151  0.0151  0.0151
+
+0.142pixel_338+0.135pixel_337+0.122pixel_872-0.109cluster=cluster3-0.1cluster=cluster4...
+  mean                                                                                                 0.3022  0.3228  0.4015  0.2285  0.4065  0.4096   0.301  0.3228  0.1748  0.2835
+  std. dev.                                                                                            0.3325  0.4506  0.5251  0.2461  0.2963  0.3456  0.3052  0.5662  0.5414   0.476
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125
+
+0.126pixel_409-0.124pixel_729-0.118pixel_665-0.11pixel_839-0.105pixel_807...
+  mean                                                                                                 -0.125 -0.2235 -0.2703   -0.24 -0.1326 -0.1806  -0.216 -0.2456 -0.1004 -0.0688
+  std. dev.                                                                                            0.2913  0.2655   0.479  0.2574  0.2453  0.4974   0.624  0.4603   0.277  0.4846
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0126  0.0126  0.0126  0.0126  0.0126  0.0126  0.0126  0.0126  0.0126  0.0126
+
+-0.166cluster=cluster6-0.12pixel_434+0.12 cluster=cluster3-0.107pixel_358+0.098cluster=cluster7...
+  mean                                                                                                 0.2405   0.015 -0.0274  0.2267  0.2249  0.1258   0.119 -0.0779  0.2598  0.1657
+  std. dev.                                                                                            0.3833  0.4354  0.6079   0.202  0.4075   0.231  0.2488  0.3828  0.4701  0.4464
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125  0.0125
+
+-0.156pixel_807-0.122pixel_1024+0.118pixel_391+0.109cluster=cluster1-0.107pixel_312...
+  mean                                                                                                 0.1668  0.2592  0.4878  0.5646  0.2506  0.4815  0.2846  0.0774  0.6616  0.3175
+  std. dev.                                                                                            0.5382  0.3284  0.2452  0.4917  0.3916  0.2767  0.2251  0.2369  0.3995  0.2468
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0115  0.0115  0.0115  0.0115  0.0115  0.0115  0.0115  0.0115  0.0115  0.0115
+
+-0.132pixel_592-0.126pixel_560-0.125pixel_665-0.121pixel_378+0.12 pixel_690...
+  mean                                                                                                -0.0633 -0.0141 -0.2503  0.0822 -0.0436  -0.045 -0.1413  0.1652 -0.0274  0.1547
+  std. dev.                                                                                            0.3061  0.3644  0.3105  0.2594  0.2695  0.3438  0.2229  0.4622  0.6258  0.2938
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0141  0.0141  0.0141  0.0141  0.0141  0.0141  0.0141  0.0141  0.0141  0.0141
+
+-0.123pixel_402-0.113pixel_312-0.112pixel_370-0.111pixel_280-0.106pixel_625...
+  mean                                                                                                -0.1871 -0.1595 -0.1172  0.0045 -0.1845 -0.0256  -0.433 -0.2889 -0.2037 -0.0858
+  std. dev.                                                                                            0.4181  0.2968  0.3041   0.175  0.3757  0.2154  0.2641   0.646  0.2325  0.4168
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0128  0.0128  0.0128  0.0128  0.0128  0.0128  0.0128  0.0128  0.0128  0.0128
+
+0.187cluster=cluster5-0.126pixel_401-0.117cluster=cluster4+0.11 pixel_625-0.105pixel_345...
+  mean                                                                                                -0.1008  0.0062  0.1799  0.0473  0.0423  0.0485  0.1687 -0.0834  0.1388  0.0523
+  std. dev.                                                                                            0.4371  0.4127  0.3579  0.1137  0.2315  0.4459  0.1505  0.5379  0.3681  0.3255
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0124  0.0124  0.0124  0.0124  0.0124  0.0124  0.0124  0.0124  0.0124  0.0124
+
+0.136cluster=cluster9-0.133cluster=cluster1-0.121pixel_104-0.121pixel_648-0.106pixel_679...
+  mean                                                                                                -0.1309 -0.2664 -0.2314 -0.3917 -0.2694 -0.1958 -0.2319 -0.1928 -0.2674 -0.2928
+  std. dev.                                                                                            0.2882  0.3889  0.2644  0.2433  0.4575  0.3046  0.4243  0.3851  0.3286   0.384
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0101  0.0101  0.0101  0.0101  0.0101  0.0101  0.0101  0.0101  0.0101  0.0101
+
+0.205cluster=cluster9-0.175cluster=cluster8-0.12cluster=cluster5+0.117pixel_625+0.107pixel_167...
+  mean                                                                                                -0.0256 -0.0298  0.0128  0.0057  0.0672 -0.1416 -0.0303  0.1174  -0.053  0.0507
+  std. dev.                                                                                            0.3029  0.4212  0.4962  0.1364  0.3545  0.3035  0.2486  0.2676  0.3842  0.3538
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0095  0.0095  0.0095  0.0095  0.0095  0.0095  0.0095  0.0095  0.0095  0.0095
+
+0.123cluster=cluster7-0.115pixel_103+0.097pixel_401-0.094pixel_166+0.093pixel_903...
+  mean                                                                                                 -0.208 -0.2602  -0.281 -0.2561 -0.1745 -0.4569 -0.2923 -0.2606 -0.1976 -0.0752
+  std. dev.                                                                                            0.3017  0.3818  0.3723  0.1585  0.3621   0.413  0.3281  0.2628  0.3227  0.2638
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091
+
+0.141cluster=cluster8-0.125pixel_745+0.125cluster=cluster7+0.119pixel_903-0.117pixel_904...
+  mean                                                                                                 0.0589 -0.1732 -0.1442  0.1052 -0.0263 -0.1288 -0.0871  0.1582 -0.1125 -0.0494
+  std. dev.                                                                                            0.3764  0.2725  0.2677  0.3004  0.2566  0.3554   0.493  0.2466  0.1788  0.2393
+  weight sum                                                                                               20      20      20      20      20      20      20      20      20      20
+  precision                                                                                            0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091  0.0091
+
+
+
+Time taken to build model: 221.74 seconds
+
+=== Evaluation on test set ===
+=== Summary ===
+
+Correctly Classified Instances         173               86.5    %
+Incorrectly Classified Instances        27               13.5    %
+Kappa statistic                          0.85  
+Mean absolute error                      0.0302
+Root mean squared error                  0.1497
+Relative absolute error                 16.8037 %
+Root relative squared error             49.9129 %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.8       0.006      0.941     0.8       0.865      0.987    1
+                 0.85      0.006      0.944     0.85      0.895      0.964    2
+                 0.95      0.017      0.864     0.95      0.905      0.996    3
+                 0.75      0.017      0.833     0.75      0.789      0.986    4
+                 0.95      0.006      0.95      0.95      0.95       0.994    5
+                 0.7       0          1         0.7       0.824      0.991    6
+                 0.9       0.072      0.581     0.9       0.706      0.984    7
+                 0.95      0          1         0.95      0.974      0.998    8
+                 0.95      0.017      0.864     0.95      0.905      0.999    9
+                 0.85      0.011      0.895     0.85      0.872      0.973    10
+Weighted Avg.    0.865     0.015      0.887     0.865     0.868      0.987
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 16  0  0  0  0  0  3  0  1  0 |  a = 1
+  0 17  2  0  1  0  0  0  0  0 |  b = 2
+  0  0 19  0  0  0  1  0  0  0 |  c = 3
+  0  0  0 15  0  0  5  0  0  0 |  d = 4
+  0  0  0  1 19  0  0  0  0  0 |  e = 5
+  1  0  0  0  0 14  2  0  2  1 |  f = 6
+  0  0  0  1  0  0 18  0  0  1 |  g = 7
+  0  1  0  0  0  0  0 19  0  0 |  h = 8
+  0  0  0  1  0  0  0  0 19  0 |  i = 9
+  0  0  1  0  0  0  2  0  0 17 |  j = 10
+
