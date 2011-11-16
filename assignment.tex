@@ -56,9 +56,9 @@ The classifier seems to make mistakes on instances where the subject's eyes are 
 \subsection*{Question i}
 In the Naive Bayes model, each of the attributes are independently distributed given the class label. This is not a very good assumption for our data set, since nearby pixels will usually have similar values, and lighting conditions affect pixels in similar ways across large regions of the image.
 
-For our dataset, Naive Bayes will build a distribution of the values for each pixel for each subject's images. Each subject only has 20 images and there are 255 possible pixel values, so this will be a very sparse distribution; and with or without +1 smoothing applied, this will make for poor predictions.
+For continuous attributes, Naive Bayes will build a gaussian distribution of the values for each pixel for each subject's images. This is a poor choice, because the many lighting conditions mean that the variation of any pixel within one class is much greater than the variation of that pixel between classes.
 
-On one hand, we want to choose a small enough number of bins that we have some bins with multiple instances in them. On the other hand, too few bins will give us very little discriminative power. 
+Discretization allows for more arbitrary distributions to be learned, for example we might have a bimodal distribution for a pixel with one mode when that pixel is in shadow and one when it is well lit. Choosing the number of bins is a parameterization problem; the more bins we allow, the closer fit to the data we allow, but the more parameters we have to learn. On one hand, we want to choose a small enough number of bins that we have some bins with multiple instances in them. On the other hand, too few bins will give us very little discriminative power.
 
 NaiveBayes with 5-fold CV, discretized pixel values:
 5 bins:  45\%
@@ -69,7 +69,7 @@ NaiveBayes with 5-fold CV, discretized pixel values:
 80 bins: 60.5\%
 100 bins: 59\%
 
-Out of the settings tested, using 60 bins for discretization gives the best performance. We see a moderate gain in performance over the original NaiveBayes result (62.5\% vs 52.5\%); this is about what we would expect, since we improved on the original sparse dataset but NaiveBayes remains less than ideal for the task at hand since its assumptions about the structure of the data do not hold well for our dataset.
+Out of the settings tested, using 60 bins for discretization gives the best performance. We see a moderate gain in performance over the original NaiveBayes result (62.5\% vs 52.5\%); this is about what we would expect, since we improved on the original gaussian model, but NaiveBayes remains less than ideal for the task at hand since its assumptions about the structure of the data do not hold well for our dataset.
 
 \subsection*{Question ii}
 \t{InfoGainAttributeVal} works by computing the information gain of each attribute, which is the difference between the entropy of the marginal class distribution and the entropy of the class distribution conditioned on that attribute. The attribute with the highest information gain tells us the most about the class, and one with 0 information gain is independent of the class.
@@ -88,14 +88,11 @@ NaiveBayes: 60\% (vs 52.5\%)
 J48: 63.5\% (vs 62\%)
 SMO: 91\% (vs 88\%)
 
-We showed in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the sparsity of values. If we had a much denser dataset, attributes which are poor predictors of class label would not affect classification performance, but since we do not they are actively harmful and removing them slightly improves our performance.
+We argued in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the gaussian model being a poor fit to the data. Keeping only the attributes with the highest information gain should have removed a lot of attributes which were poor predictors and strongly correlated with each other, giving us better performance as observed.
 
 The decision tree algorithm already works by selecting the attributes with the highest information gain, so as expected we see very little difference.
 
-The SVM algorithm can simply assign near-0 weights to attributes which don't contribute much, so we don't see much of a gain here either.
-
-
-*** TODO just noticed that NaiveBayes models each probability with a gaussian rather than a discrete distribution when we haven't performed discretization, need to redo sections on NaiveBayes above :(
+The SVM algorithm TODO
 
 \section*{Part C}
 \subsection*{Question i}
@@ -104,11 +101,11 @@ The eigenvalues in descending order are plotted in Figure~TODO. As we can see th
 
 \subsection*{Question ii}
 
-After using the PrincipalComponents attribute filter to retain 95\% of the variation in the dataset, we are left with only 28 attributes.
+After using the PrincipalComponents attribute filter to retain 95\% of the variation in the dataset, we are left with only 32 attributes.
 
-NaiveBayes: 77\%
-J48: 58.5\%
-SMO: 82\%
+NaiveBayes: 81.5\%
+J48: 61.5\%
+SMO: 82.5\%
 
 PCA gives us components which are actually independent and so suits Naive Bayes well, and this is reflected in the improved performance of Naive Bayes on this version of the dataset.
 
@@ -120,7 +117,7 @@ The SMO algorithm got worse because... TODO
 
 The eigenfaces corresponding to the largest eigenvalues capture gross detail, with successively finer features as one proceeds to smaller eigenvalues.
 
-The largest two eigenvalues are 0.620 and 0.352. The corresponding eigenfaces are an average face, corresponding to the variation in level of global illumination in the dataset, and a face which looks lit from the side, corresponding to the variation in left-right illumination in the images. Only when we get some number of eigenfaces in do we start seeing ones which distinguish between facial features as opposed to illumination; this makes sense since in the dataset the difference between images with different illumination directions is much more dramatic than the difference between two faces under the same illumination.
+The largest two eigenvalues are 0.618 and 0.303. The corresponding eigenfaces are an average face, corresponding to the variation in level of global illumination in the dataset, and a face which looks lit from the side, corresponding to the variation in left-right illumination in the images. Only when we get some number of eigenfaces in do we start seeing ones which distinguish between facial features as opposed to illumination; this makes sense since in the dataset the difference between images with different illumination directions is much more dramatic than the difference between two faces under the same illumination.
 
 \subsection*{Question iv}
 Around 10 components are required to produce a face which is clearly recognisable as the original. As we increase the number of components, the face moves away from the average of the underlying faces and gains specific details from the face we are reconstructing.
@@ -128,9 +125,9 @@ Around 10 components are required to produce a face which is clearly recognisabl
 \subsection*{Question v}
 We remove the four attributes with the largest eigenvalues.
 
-NaiveBayes: 72\% (vs 77\%)
+NaiveBayes: 82.5\% (vs 81.5\%)
 
-The accuracy has decreased slightly, but as stated before the greatest part of the variation in the dataset is in lighting which is not significant to our classification task, so the attributes we have left still serve well for classifying the data.
+The accuracy has increased slightly. As stated before the greatest part of the variation in the dataset is in the lighting, which is not significant to our classification task; so the attributes we have left after removing the four with largest variation serve well for classifying the data.
 
 \subsection*{Question vi}
 We try running SMO retaining different numbers of the top eigenfaces.
@@ -140,8 +137,13 @@ SMO 40 eigenfaces: 90\%
 SMO 80 eigenfaces: 85\%
 SMO 120 eigenfaces: 78\%
 SMO 160 eigenfaces: 63\%
-SMO 200 eigenfaces: 63\%
+SMO 200 eigenfaces: 62.5\%
 
 We notice that there is a peak in performance around 40 attributes, after which performance falls off. This is because TODO.
+% This may be because with more attributes, the input data is sparser; or because the SVM algorithm has as many degrees of freedom as the number of attributes in the training data, and so can overfit if given more attributes - but then why did it do so well on the dataset before PCA??
+
+\section*{Part D}
+\subsection*{Question i}
+
 
 \end{document}

@@ -1,0 +1,23 @@
+Tester:     weka.experiment.PairedCorrectedTTester
+Analysing:  Percent_correct
+Datasets:   3
+Resultsets: 3
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       16/11/11 15:02
+
+
+Dataset                   (1) bayes.NaiveBay | (2) trees.J48 ' (3) functions.S
+------------------------------------------------------------------------------
+train_clean               (25)   53.60(5.95) |   61.90(7.19)     88.00(3.15) v
+train_best                (25)   63.60(6.04) |   64.30(7.02)     90.10(3.19) v
+'train_best-weka.filters. (25)   77.40(6.67) |   55.70(6.27) *   80.60(5.32)  
+------------------------------------------------------------------------------
+                                     (v/ /*) |         (0/2/1)         (2/1/0)
+
+
+Key:
+(1) bayes.NaiveBayes '' 5995231201785697655
+(2) trees.J48 '-C 0.25 -M 2' -217733168393644444
+(3) functions.SMO '-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"functions.supportVector.PolyKernel -C 250007 -E 1.0\"' -6585883636378691736
+
