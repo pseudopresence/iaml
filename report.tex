@@ -356,15 +356,22 @@ Percentage & Instances & Accuracy\\
 As we can see from the plot above, the performance is tailing off somewhat as we add more data, but the last 20\% of the dataset does provide a reasonable improvement and so a significantly larger dataset could still improve the performance of the classifier.
 
 \subsection*{Question iii}
-Naive Bayes with PCA: 83.5\%
-EM seed default 100, 10 clusters.
-Naive Bayes with PCA and EM clusters: 86.5\%
-
-Adding cluster labels has slightly helped. Although they don't contain any data independent of the original dataset, NaiveBayes assumes all attributes are independent given the class labels, and so doesn't make use of all the information in the original dataset; by adding new features which are distinct from any of the original ones and which are useful in themselves for classification, we can improve the performance of the classifier.
+We use the {\tt FilteredClassifer} to allow us to use a validation set while performing filtering on the data. We train using {\tt train\_faces\_clean} and evaluate using {\tt val\_faces}. In one trial we apply PCA to the dataset and evaluate using {\tt NaiveBayes}. In the second trial we apply cluster lbels using the EM algorithm with the default seed of 100 and using 10 clusters, then apply PCA.\\
+\\
+\begin{tabular}{lr}
+Filtering & Accuracy \\
+PCA & 83.5\% \\
+EM and PCA & 86.5\%
+\end{tabular}\\
+\\
+Adding cluster labels has slightly helped. Although they don't contain any data independent of the original dataset, {\tt NaiveBayes} assumes all attributes are independent given the class labels, and so doesn't make use of all the information in the original dataset; by adding new features which are distinct from any of the original ones and which are useful in themselves for classification, we can improve the performance of the classifier.
 
 % TODO: Try the Vote meta-classifier with multiple methods.
 % TODO: Expected J48 do do very well after PCA because it should give us independent attributes, which will then have independent information gains! 
 % TODO: PCA gives us attributes which are marginally independent. NaiveBayes assumes attributes which are conditionally independent, given the class. Decision trees assume/do well with...data that is separable along attribute axes? SVM needs data that is (mostly) linearly separable.
 
-Got good results with PCA (100\%) -> InfoGain Ranker -> Remove 0-infogain attributes -> AddCluster (EM, 10 clusters) (or K-Means!) -> SMO or NaiveBayes
+\section*{Part E}
+
+Using both the {\tt train\_faces\_clean} and {\tt train\_faces\_clean\_best}, we systematically explored combinations of the techniques and classifiers used in previous parts, trying to improve on the 92.5\% rate obtained with {\tt SMO} on the {\tt best} dataset. The only success was found when applying PCA retaining 100\% of variation, ranking the resulting attributes by information gain, removing all those with 0 information gain, and adding a cluster label using EM with 10 clusters before classifying with {\tt SMO}; this gave 93\% accuracy. Unfortunately applying clustering after PCA gives an error in WEKA, even when telling it to ignore the class label using the ignoredAttributes field, so this technique could not be applied to the test set. Finally, we tried different classifiers with cool-sounding names until we hit upon {\tt MultilayerPerceptron} which gives 96.5\% on {\tt val\_faces\_best}. These results and the test set predictions are included in the file {\tt iaml\_assignment.res} submitted alongside this report.
+
 \end{document}
