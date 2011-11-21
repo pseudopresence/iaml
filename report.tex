@@ -15,6 +15,9 @@
 \begin{document}
 
 \maketitle
+
+This assignment was discussed with Dan Mankowitz, Dino Vougioukas, Kostas Kanellis, Facundo Bellosi, Carlos Garc\'{\i}a.
+
 \clearpage
 
 \section*{Part A}
@@ -88,9 +91,13 @@ The first three images from {\it cluster1} and {\it cluster3} are shown in Figur
 
 We see that the two dominating clusters seem to be pure white and noisy dark images which are not relevant to our task.
 
+% TODO include more discussion of how these bad instances affect the results in part A i). Consider cross-validation where we might have unbalanced subsets with a lot of the while or black images. Comment on each classifier?
+
+% TODO SVM is sensitive to some outliers - if the dataset is not linearly spearable, misclassified instances become support vectors with a penalty and will affect the boundary
+
 \subsection*{Question iii}
 Using the filter {\tt RemoveWithAttribute}, we removed instances in {\it cluster2} and {\it cluster6}. As shown in Figure~\ref{fig:a3img1}, the resulting dataset has 20 instances of each class, as expected from the task description.
-
+% 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{A2-img3-remjunk-cropped.png}
@@ -144,7 +151,7 @@ Two example incorrectly classified instances are shown in Figure~\ref{fig:a5img2
 \subsection*{Question i}
 In the Naive Bayes model, each of the attributes are independently distributed given the class label. This is not a very good assumption for our data set, since nearby pixels will usually have similar values, and lighting conditions affect pixels in similar ways across large regions of the image.
 
-For continuous attributes, Naive Bayes will build a gaussian distribution of the values for each pixel for each subject's images. This is a poor choice, because the many lighting conditions mean that the variation of any pixel within one class is much greater than the variation of that pixel between classes.
+For continuous attributes, {\tt NaiveBayes} will build a gaussian distribution of the values for each pixel for each subject's images. This is a poor choice, because the many lighting conditions mean that the variation of any pixel within one class is much greater than the variation of that pixel between classes.
 
 Discretization allows for more arbitrary distributions to be learned, for example we might have a bimodal distribution for a pixel with one mode when that pixel is in shadow and one when it is well lit. Choosing the number of bins is a parameterization problem; the more bins we allow, the closer fit to the data we allow, but the more parameters we have to learn. On one hand, we want to choose a small enough number of bins that we have some bins with multiple instances in them. On the other hand, too few bins will give us very little discriminative power.
 
@@ -165,12 +172,12 @@ Bins & Accuracy\\
 Out of the settings tested, using 60 bins for discretization gives the best performance. We see a moderate gain in performance over the original NaiveBayes result (62.5\% vs 52.5\%); this is about what we would expect, since we improved on the original gaussian model, but {\tt NaiveBayes} remains less than ideal for the task at hand since its assumptions about the structure of the data do not hold well for our dataset.
 
 \subsection*{Question ii}
-{\tt InfoGainAttributeVal} works by computing the information gain of each attribute, which is the difference between the entropy of the marginal class distribution and the entropy of the class distribution conditioned on that attribute. The attribute with the highest information gain tells us the most about the class, and one with 0 information gain is independent of the class.
+{\tt InfoGainAttributeEval} works by computing the information gain of each attribute, which is the difference between the entropy of the marginal class distribution and the entropy of the class distribution conditioned on that attribute. The attribute with the highest information gain tells us the most about the class, and one with 0 information gain is independent of the class.
 
-After removing the attributes with 0 information gain, 353 attributes were left - w note that the provided {\tt train\_faces\_clean\_best.arff} has 350 attributes.
+After removing the attributes with 0 information gain, 353 attributes were left - we note that the provided {\tt train\_faces\_clean\_best.arff} has 350 attributes.
 
 \subsection*{Question iii}
-As shown in Figure~\ref{fig:b3img1}, The selected pixels with highest information gain cluster around the areas of the eyes, the corner of the chin, and the mouth and nose, ignoring the cheeks and the nose bridge. This corresponds with the most distinguishing features of a human face.
+As shown in Figure~\ref{fig:b3img1}, the selected pixels with highest information gain cluster around the areas of the eyes, the corner of the chin, and the mouth and nose, ignoring the cheeks and the nose bridge. This corresponds with the most distinguishing features of a human face.
 
 A potential problem with the information gain criterion is that if we use it to select more than one feature at once, these features might be correlated, and so the second we select would tell us a lot by itself but very little if we already know the first.
 
@@ -194,8 +201,8 @@ Method & Accuracy & Baseline \\
 {\tt SMO} & 91\% & 88\%
 \end{tabular}\\
 \\
-We argued in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the gaussian model being a poor fit to the data. Keeping only the attributes with the highest information gain should have removed a lot of attributes which were poor predictors and strongly correlated with each other, giving us better performance as observed.
-
+We argued in part i) that the Naive Bayes algorithm has trouble with the original dataset due to the independence assumption being a poor fit to the data. Keeping only the attributes with the highest information gain should have removed a lot of attributes which were poor predictors and strongly correlated with each other, giving us better performance as observed.
+% TODO - throwing away random pixels should be better than the original dataset, but doing it with information gain keeps better pixels.
 The decision tree algorithm already works by selecting the attributes with the highest information gain, so as expected we see very little difference.
 
 The SVM algorithm performs about the same as before. SVM should not be affected by additional attributes which are poor predictors.
@@ -220,7 +227,7 @@ After using the {\tt PrincipalComponents} attribute filter to retain 95\% of the
 
 We evaluate the same three classifiers as before on the new reduced dataset, again evaluating using 5-fold CV. We take the results from A iv) as baseline for comparaison.\\
 \\
-\begin{tabular}{lrr}
+\begin{tabular}{lll}
 Method & Accuracy & Baseline \\
 \hline
 {\tt NaiveBayes} & 81.5\% & 52.5\% \\
@@ -228,11 +235,11 @@ Method & Accuracy & Baseline \\
 {\tt SMO} & 82.5\% & 88\%
 \end{tabular}\\
 \\
-PCA gives us components which are actually independent and so suit {\tt NaiveBayes} well, and this is reflected in the improved performance of Naive Bayes on this version of the dataset.
+PCA gives us components which are uncorrelated and so suit {\tt NaiveBayes} well, and this is reflected in the improved performance of Naive Bayes on this version of the dataset.
+% Uncorrelation guarantees indep. and correlation guarantees dep, but not hte other way around
+The decision tree algorithm tries to find binary splits in the values of each attribute to classify instances. It is not affected by correlated attributes, since after it splits on one of them the inormation gain of the other would be small; so we would not expect an improvement. It would still be possible for the attributes we have thrown away to contain a lot of the information; the fact that we did not get worse performance suggests that most of the information is in fact contained in the principal components. 
 
-The decision tree algorithm tries to find binary splits in the values of each attribute to classify instances. After PCA, most of the variation occurs in very few attributes which doesn't leave the decision tree algorithm much to work with.
-
-Since PCA performs a rotation of the attribute space and SVM is a linear classifier, I would expect {\tt SMO} to perform as well on this dataset as on the original; if we perform the above evaluation but retain 100\% of the variation, we get an accuracy of 87.5\% using {\tt SMO} on the processed dataset. Therefore the attributes which had low variance and were discarded must have been useful for linear classification.
+Since PCA performs a rotation of the attribute space and SVM is a linear classifier, we would expect {\tt SMO} to perform as well on this dataset as on the original; if we perform the above evaluation but retain 100\% of the variation, we get an accuracy of 87.5\% using {\tt SMO} on the processed dataset. Therefore the attributes which had low variance and were discarded must have been useful for linear classification.
 
 \subsection*{Question iii}
 
@@ -245,7 +252,7 @@ The eigenfaces corresponding to the largest eigenvalues capture gross detail, wi
 \label{fig:c3img1}
 \end{figure}
 
-The largest two eigenvalues are 0.618 and 0.303. The corresponding eigenfaces are show in Figure~\ref{fig:c3img1}. These eigenfaces are an average face, corresponding to the variation in level of global illumination in the dataset, and a face which looks lit from the side, corresponding to the variation in left-right illumination in the images. Only when we get some number of eigenfaces in do we start seeing ones which distinguish between facial features as opposed to illumination; this makes sense since in the dataset the difference between images with different illumination directions is much more dramatic than the difference between two faces under the same illumination.
+The largest two eigenvalues are 390.8 and 323.3. The corresponding eigenfaces are show in Figure~\ref{fig:c3img1}. These eigenfaces are an average face, corresponding to the variation in level of global illumination in the dataset, and a face which looks lit from the side, corresponding to the variation in left-right illumination in the images. Only when we get some number of eigenfaces in do we start seeing ones which distinguish between facial features as opposed to illumination; this makes sense since in the dataset the difference between images with different illumination directions is much more dramatic than the difference between two faces under the same illumination.
 
 \FloatBarrier
 
@@ -271,7 +278,7 @@ Around 10 components are required to produce a face which is clearly recognisabl
 \subsection*{Question v}
 We remove the four attributes with the largest eigenvalues, and evaluate the {\tt NaiveBayes} classifier using 5-fold CV, using the results from C ii) as baseline.\\
 \\
-\begin{tabular}{lrr}
+\begin{tabular}{lll}
 Method & Accuracy & Baseline \\
 \hline
 {\tt NaiveBayes} & 82.5\% & 81.5\% \\
@@ -282,7 +289,7 @@ The accuracy has increased slightly. As stated before the greatest part of the v
 \subsection*{Question vi}
 We try running {\tt SMO} retaining different numbers of the top eigenfaces, evaluating the results using 5-fold CV. We include results obtained in part ii).\\
 \\
-\begin{tabular}{lrr}
+\begin{tabular}{ll}
 Eigenfaces & Accuracy \\
 \hline
 20 & 73.5\% \\
@@ -328,23 +335,24 @@ Dataset          & {\tt clean} & {\tt clean\_best} & & {\tt clean\_pca} & \\
 \\
 We see that for {\tt NaiveBayes}, {\tt train\_faces\_clean\_best} and {\tt train\_faces\_clean\_pca} are both significantly better than {\tt train\_faces\_clean} with 99\% confidence. For {\tt J48}, none of the datasets are significantly better than the others.\\
 \\
-Based on this, I would select TODO for further experiments.
+Based on this, I would select {\tt train\_faces\_clean\_best} for further experiments.
 % train\_faces\_clean\_best?
 
 \subsection*{Question ii}
 
-Randomizing the dataset with default seed of 42.
-
-Using RemovePercent, invertselection true, values of 100 to 5.
-
-100\% of Data (200 instances): 92\%
-80\% of Data (160 instances): 87\%
-65\% of Data (130 instances): 86.5\% 
-50\% of Data (100 instances): 84\%
-35\% of Data (70 instances): 76.5\%
-10\% of Data (20 instances): 40\%
-5\% of Data (10 instances): 21.5\%
-
+We use the {\tt Randomize} instance filter to shuffle the dataset, using the default seed of 42. We then produce nested datasets by using the {\tt RemovePercentage} instance filter, setting {\tt invertSelection} true, with percentage values of 100 to 5. We evaluate the {\tt SMO} classifier on the resulting datasets, evaluating using {\tt val\_faces} rather than cross-validation.\\
+\\
+\begin{tabular}{lll}
+Percentage & Instances & Accuracy\\
+100\% & 200 & 92\% \\
+80\% & 160 & 87\% \\
+65\% & 130 & 86.5\% \\
+50\% & 100 & 84\% \\
+35\% & 70 & 76.5\% \\
+10\% & 20 & 40\% \\
+5\% & 10 & 21.5\%
+\end{tabular}\\
+\\
 As we can see from the plot above, the performance is tailing off somewhat as we add more data, but the last 20\% of the dataset does provide a reasonable improvement and so a significantly larger dataset could still improve the performance of the classifier.
 
 \subsection*{Question iii}
@@ -354,4 +362,9 @@ Naive Bayes with PCA and EM clusters: 86.5\%
 
 Adding cluster labels has slightly helped. Although they don't contain any data independent of the original dataset, NaiveBayes assumes all attributes are independent given the class labels, and so doesn't make use of all the information in the original dataset; by adding new features which are distinct from any of the original ones and which are useful in themselves for classification, we can improve the performance of the classifier.
 
+% TODO: Try the Vote meta-classifier with multiple methods.
+% TODO: Expected J48 do do very well after PCA because it should give us independent attributes, which will then have independent information gains! 
+% TODO: PCA gives us attributes which are marginally independent. NaiveBayes assumes attributes which are conditionally independent, given the class. Decision trees assume/do well with...data that is separable along attribute axes? SVM needs data that is (mostly) linearly separable.
+
+Got good results with PCA (100\%) -> InfoGain Ranker -> Remove 0-infogain attributes -> AddCluster (EM, 10 clusters) (or K-Means!) -> SMO or NaiveBayes
 \end{document}

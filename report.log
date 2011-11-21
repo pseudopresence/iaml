@@ -1,0 +1,404 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.11)  20 NOV 2011 15:32
+entering extended mode
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-texlive/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks16
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen105
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks19
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks20
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip49
+\c@subfigure=\count100
+\c@lofdepth=\count101
+\c@subtable=\count102
+\c@lotdepth=\count103
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+) (./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count104
+\scratchdimen=\dimen116
+\scratchbox=\box28
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen117
+\MPnumerator=\count108
+\everyMPtoPDFconversion=\toks24
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 26--35
+
+ []
+
+<A2-img1-clusters-cropped.png, id=8, 477.28313pt x 280.79906pt>
+File: A2-img1-clusters-cropped.png Graphic file (type png)
+
+<use A2-img1-clusters-cropped.png> [2
+
+ <./A2-img1-clusters-cropped.png (PNG copy)>] <A2-img2-classes-cropped.png, id=
+15, 477.28313pt x 280.04625pt>
+File: A2-img2-classes-cropped.png Graphic file (type png)
+
+<use A2-img2-classes-cropped.png>
+<A2-img3-cluster2-cropped.pdf, id=16, 368.37625pt x 130.4875pt>
+File: A2-img3-cluster2-cropped.pdf Graphic file (type pdf)
+
+<use A2-img3-cluster2-cropped.pdf>
+<A2-img4-cluster6-cropped.pdf, id=17, 368.37625pt x 129.48375pt>
+File: A2-img4-cluster6-cropped.pdf Graphic file (type pdf)
+
+<use A2-img4-cluster6-cropped.pdf> [3
+
+ <./A2-img2-classes-cropped.png (PNG copy)> <./A2-img3-cluster2-cropped.pdf> <.
+/A2-img4-cluster6-cropped.pdf>]
+<A2-img5-cluster1-cropped.pdf, id=29, 369.38pt x 130.4875pt>
+File: A2-img5-cluster1-cropped.pdf Graphic file (type pdf)
+
+<use A2-img5-cluster1-cropped.pdf>
+<A2-img6-cluster3-cropped.pdf, id=30, 368.37625pt x 130.4875pt>
+File: A2-img6-cluster3-cropped.pdf Graphic file (type pdf)
+
+<use A2-img6-cluster3-cropped.pdf>
+<A2-img3-remjunk-cropped.png, id=31, 476.53032pt x 279.29344pt>
+File: A2-img3-remjunk-cropped.png Graphic file (type png)
+
+<use A2-img3-remjunk-cropped.png>
+Underfull \hbox (badness 10000) in paragraph at lines 109--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--120
+
+ []
+
+[4
+
+ <./A2-img5-cluster1-cropped.pdf> <./A2-img6-cluster3-cropped.pdf> <./A2-img3-r
+emjunk-cropped.png (PNG copy)>]
+Overfull \hbox (4.97621pt too wide) in paragraph at lines 122--131
+\OT1/cmr/m/n/10 We train the \OT1/cmtt/m/n/10 SMO \OT1/cmr/m/n/10 clas-si-fier 
+from \OT1/cmtt/m/n/10 train[]faces[]clean.arff\OT1/cmr/m/n/10 , us-ing \OT1/cmt
+t/m/n/10 val[]faces.arff
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--131
+
+ []
+
+<A5-correct-cropped.pdf, id=42, 369.38pt x 181.67876pt>
+File: A5-correct-cropped.pdf Graphic file (type pdf)
+
+<use A5-correct-cropped.pdf>
+<A5-incorrect-cropped.pdf, id=43, 368.37625pt x 181.67876pt>
+File: A5-incorrect-cropped.pdf Graphic file (type pdf)
+
+<use A5-incorrect-cropped.pdf> [5 <./A5-correct-cropped.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--173
+
+ []
+
+[6 <./A5-incorrect-cropped.pdf>]
+<B3-img1-pixels-cropped.pdf, id=56, 299.1175pt x 299.1175pt>
+File: B3-img1-pixels-cropped.pdf Graphic file (type pdf)
+
+<use B3-img1-pixels-cropped.pdf> [7 <./B3-img1-pixels-cropped.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 194--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--207
+
+ []
+
+<C1-img1-eigenvalues-cropped.pdf, id=64, 369.38pt x 299.1175pt>
+File: C1-img1-eigenvalues-cropped.pdf Graphic file (type pdf)
+
+<use C1-img1-eigenvalues-cropped.pdf> [8 <./C1-img1-eigenvalues-cropped.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 228--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--241
+
+ []
+
+<C3-img1-eigfaces-cropped.pdf, id=71, 334.24875pt x 147.55125pt>
+File: C3-img1-eigfaces-cropped.pdf Graphic file (type pdf)
+
+<use C3-img1-eigfaces-cropped.pdf> [9 <./C3-img1-eigfaces-cropped.pdf>]
+<C4-img6-6comp-cropped.pdf, id=78, 299.1175pt x 298.11375pt>
+File: C4-img6-6comp-cropped.pdf Graphic file (type pdf)
+
+<use C4-img6-6comp-cropped.pdf>
+<C4-img2-8comp-cropped.pdf, id=79, 297.11pt x 298.11375pt>
+File: C4-img2-8comp-cropped.pdf Graphic file (type pdf)
+
+<use C4-img2-8comp-cropped.pdf>
+<C4-img3-9comp-cropped.pdf, id=80, 298.11375pt x 299.1175pt>
+File: C4-img3-9comp-cropped.pdf Graphic file (type pdf)
+
+<use C4-img3-9comp-cropped.pdf>
+<C4-img4-10comp-cropped.pdf, id=81, 299.1175pt x 298.11375pt>
+File: C4-img4-10comp-cropped.pdf Graphic file (type pdf)
+
+<use C4-img4-10comp-cropped.pdf>
+<C4-img5-11comp-cropped.pdf, id=82, 298.11375pt x 298.11375pt>
+File: C4-img5-11comp-cropped.pdf Graphic file (type pdf)
+
+<use C4-img5-11comp-cropped.pdf>
+<C4-img1-orig-cropped.pdf, id=83, 298.11375pt x 298.11375pt>
+File: C4-img1-orig-cropped.pdf Graphic file (type pdf)
+
+<use C4-img1-orig-cropped.pdf> [10] [11 <./C4-img6-6comp-cropped.pdf> <./C4-img
+2-8comp-cropped.pdf> <./C4-img3-9comp-cropped.pdf> <./C4-img4-10comp-cropped.pd
+f> <./C4-img5-11comp-cropped.pdf> <./C4-img1-orig-cropped.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--340
+
+ []
+
+
+Overfull \hbox (0.31506pt too wide) in paragraph at lines 312--340
+\OT1/cmr/m/n/10 We see that for two datasets, \OT1/cmtt/m/n/10 train[]faces[]cl
+ean \OT1/cmr/m/n/10 and \OT1/cmtt/m/n/10 train[]faces[]clean[]best\OT1/cmr/m/n/
+10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--340
+
+ []
+
+
+Overfull \hbox (16.12212pt too wide) in paragraph at lines 312--340
+\OT1/cmr/m/n/10 We see that for \OT1/cmtt/m/n/10 NaiveBayes\OT1/cmr/m/n/10 , \O
+T1/cmtt/m/n/10 train[]faces[]clean[]best \OT1/cmr/m/n/10 and \OT1/cmtt/m/n/10 t
+rain[]faces[]clean[]pca
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--340
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 343--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--357
+
+ []
+
+[13] (./report.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1838 strings out of 495061
+ 24142 string characters out of 1182621
+ 80432 words of memory out of 3000000
+ 5011 multiletter control sequences out of 15000+50000
+ 9229 words of font info for 34 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 27i,7n,24p,708b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb>
+Output written on report.pdf (13 pages, 184681 bytes).
+PDF statistics:
+ 135 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+
